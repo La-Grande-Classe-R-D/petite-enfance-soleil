@@ -3,7 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState, type MouseEvent } from "react";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
+
+function TikTokIcon({ className, ...props }: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+    </svg>
+  );
+}
 
 type FooterModal = "legal" | "sitemap" | "contact" | null;
 const MODAL_EXIT_DURATION_MS = 260;
@@ -112,10 +120,9 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "https://lagrandeclasse.fr/", label: "Facebook" },
-    /*{ icon: Twitter, href: "#", label: "X" },*/
-    { icon: Instagram, href: "https://lagrandeclasse.fr/", label: "Instagram" },
-    { icon: Linkedin, href: "https://lagrandeclasse.fr/", label: "LinkedIn" },
+    { icon: TikTokIcon, href: "https://www.tiktok.com/@lagrandeclasseofficiel", label: "TikTok" },
+    { icon: Instagram, href: "https://www.instagram.com/lagrandeclasseidf/", label: "Instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/grande-classe/", label: "LinkedIn" },
   ];
 
   const partners = [
