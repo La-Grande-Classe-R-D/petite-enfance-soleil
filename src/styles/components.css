@@ -1,6 +1,12 @@
 .page {
   min-height: 100vh;
   background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+    url("/asset/daycare-children-playing.jpg");
+  background-size: auto, cover;
+  background-position: center, center;
+  background-attachment: local, fixed;
   position: relative;
 }
 
@@ -1166,6 +1172,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .page {
+    background-attachment: local, local;
+  }
+
   .page::before,
   .header-logo__icon,
   .reveal,

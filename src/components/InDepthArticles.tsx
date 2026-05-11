@@ -14,7 +14,7 @@ interface InDepthArticlesProps {
 
 export function InDepthArticles({ articles }: InDepthArticlesProps) {
   return (
-    <section className="section section--muted">
+    <section className="section">
       <div className="container">
         <div className="cards">
           {articles.map((article) => (
