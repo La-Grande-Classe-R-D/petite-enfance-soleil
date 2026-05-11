@@ -55,9 +55,9 @@ export default function PedagogiePage() {
                   </div>
                 ))}
               </div>
-              <a className="button button--primary" href="mailto:contact@lagrandeclasse.fr?subject=Demande%20de%20propositions%20educatives">
+              <button type="button" className="button button--primary">
                 Voir les propositions éducatives
-              </a>
+              </button>
             </div>
             <div className="formation-hero__media">
               <Image

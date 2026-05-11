@@ -55,9 +55,9 @@ export default function PratiquesProfessionnellesPage() {
                   </div>
                 ))}
               </div>
-              <a className="button button--primary" href="mailto:contact@lagrandeclasse.fr?subject=Demande%20de%20fiches%20metiers">
+              <button type="button" className="button button--primary">
                 Consulter les fiches métiers
-              </a>
+              </button>
             </div>
             <div className="formation-hero__media">
               <Image
