@@ -6,6 +6,7 @@ import "@/styles/components.css";
 import { HeaderWrapper } from "@/components/HeaderWrapper";
 import { Footer } from "@/components/Footer";
 import { ChatbotModal } from "@/components/ChatbotModal";
+import { CookieBanner } from "@/components/CookieBanner";
 import { Poppins, Open_Sans, Baloo_2 } from "next/font/google";
 
 const poppins = Poppins({
@@ -32,6 +33,26 @@ const baloo = Baloo_2({
 export const metadata: Metadata = {
   title: "La grande classe - Petite enfance",
   description: "Actualitées et dossiers de la petite enfance",
+  openGraph: {
+    title: "La grande classe - Petite enfance",
+    description: "Actualitées et dossiers de la petite enfance",
+    url: "https://petite-enfance.lagrandeclasse.fr",
+    siteName: "La grande classe - Petite enfance",
+    images: [
+      {
+        url: "/asset/icone-lgc.png",
+        alt: "La grande classe - Petite enfance",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "La grande classe - Petite enfance",
+    description: "Actualitées et dossiers de la petite enfance",
+    images: ["/asset/icone-lgc.png"],
+  },
   icons: {
     icon: [
       { url: "/favicon/favicon.ico" },
@@ -61,6 +82,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <ChatbotModal />
+          <CookieBanner />
         </div>
       </body>
     </html>
