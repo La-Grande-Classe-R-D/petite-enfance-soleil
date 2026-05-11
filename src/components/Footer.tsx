@@ -104,6 +104,7 @@ export function Footer() {
     newTab?: boolean;
     modal?: Exclude<FooterModal, null>;
   }> = [
+    { label: "La grande classe", href: "https://lagrandeclasse.fr", newTab: true },
     { label: "Qui sommes-nous ?", href: "https://lagrandeclasse.fr/", newTab: true },
     { label: "Mentions legales", modal: "legal" },
     { label: "Plan du site", modal: "sitemap" },
