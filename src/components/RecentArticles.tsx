@@ -15,7 +15,7 @@ interface RecentArticlesProps {
 
 export function RecentArticles({ articles }: RecentArticlesProps) {
   return (
-    <section className="section section--muted reveal snap-section" data-reveal>
+    <section className="section reveal snap-section" data-reveal>
       <div className="container">
         <h2 id="activites-title" className="section-title section-title--lg">Activités</h2>
         <div className="cards">

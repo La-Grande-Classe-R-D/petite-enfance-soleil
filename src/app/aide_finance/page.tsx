@@ -261,7 +261,7 @@ export default function AideFinancePage() {
         </div>
       ) : null}
 
-      <section className="section section--muted">
+      <section className="section">
         <div className="container">
           <h2 className="section-title section-title--lg">Repères pour les familles</h2>
           <div className="cards formation-cards">

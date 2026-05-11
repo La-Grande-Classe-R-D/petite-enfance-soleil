@@ -74,7 +74,7 @@ export default function FormationPage() {
         </div>
       </section>
 
-      <section className="section section--muted">
+      <section className="section">
         <div className="container">
           <h2 className="section-title section-title--lg">Contenu de la formation</h2>
           <div className="cards formation-cards">
