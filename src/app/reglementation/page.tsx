@@ -108,7 +108,7 @@ export default function ReglementationPage() {
               <p>
                 Centraliser des contenus fictifs faciles à lire pour aider les
                 professionnels à visualiser les obligations, les procédures et les
-                points de vigilance d&apos;une structure petite enfance.
+                points de vigilance d'une structure petite enfance.
               </p>
             </div>
           </div>
