@@ -251,7 +251,7 @@ export default function AideFinancePage() {
               <div className="finance-modal__actions">
                 <a
                   className="button button--primary finance-modal__contact-button"
-                  href="mailto:contact@lagrandeclasse.fr?subject=Demande%20d%27information%20-%20Aides%20financieres%20et%20tarifs"
+                  href="mailto:amel.benhamdi@grandeclasse.fr?subject=Demande%20d%27information%20-%20Aides%20financieres%20et%20tarifs"
                 >
                   Nous contacter
                 </a>
