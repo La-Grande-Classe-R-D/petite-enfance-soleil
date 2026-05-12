@@ -127,9 +127,7 @@ export function Footer() {
 
   const partners = [
   "Ministère de la Santé‚",
-   "Éducation Nationale",
     "CAF",
-    "PMI",
   ];
 
   const legalSections = [
@@ -189,7 +187,7 @@ export function Footer() {
   const contactItems = [
     { label: "Adresse", value: "9 rue de Saint-Denis, 93400 Saint-Ouen" },
     { label: "Téléphone", value: "01.40.10.27.22", href: "tel:0140102722" },
-    { label: "Email", value: "contact@lagrandeclasse.fr", href: "mailto:contact@lagrandeclasse.fr" },
+    { label: "Email", value: "amel.benhamdi@grandeclasse.fr", href: "mailto:amel.benhamdi@grandeclasse.fr" },
     { label: "Site officiel", value: "lagrandeclasse.fr", href: "https://lagrandeclasse.fr/" },
   ];
 

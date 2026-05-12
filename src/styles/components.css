@@ -1366,7 +1366,9 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-
+.finance-modal__title-child{
+  font-size: 1.5rem;
+}
 .finance-modal__title {
   max-width: 34rem;
   font-size: clamp(1.35rem, 2vw, 2rem);

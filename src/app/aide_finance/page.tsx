@@ -163,8 +163,8 @@ export default function AideFinancePage() {
                     Estimation et tarifs
                   </span>
                 </div>
-                <h2 className="footer-modal__title finance-modal__title" id="estimate-modal-title">
-                  TARIFS GARDE D&apos;ENFANTS A DOMICILE
+                <h2 className="footer-modal__title finance-modal__title-child" id="estimate-modal-title">
+                  TARIFS, GARDE A DOMICILE ET ATELIER D'ANGLAIS POUR ENFANTS
                 </h2>
               </div>
               <button
@@ -189,12 +189,12 @@ export default function AideFinancePage() {
                   </li>
                 </ul>
               </section>
-              <section className="footer-modal__section finance-modal__section finance-modal__notice">
+           {/*    <section className="footer-modal__section finance-modal__section finance-modal__notice">
                 <p>
                   Devis gratuit obligatoire pour toute prestation supérieure à
                   100 € TTC / mois.
                 </p>
-              </section>
+              </section> */}
               <section className="footer-modal__section finance-modal__section">
                 <h3 className="footer-modal__section-title">Aides possibles :</h3>
                 <ul className="finance-modal__list">
@@ -234,7 +234,7 @@ export default function AideFinancePage() {
                       <li>Mercredi journée complète (9h00 - 18h00) : 240 €</li>
                     </ul>
                   </div>
-                  <div className="finance-modal__pricing-card finance-modal__pricing-card--wide">
+                 {/*  <div className="finance-modal__pricing-card finance-modal__pricing-card--wide">
                     <p className="finance-modal__pricing-title">
                       Vacances scolaires
                     </p>
@@ -245,7 +245,7 @@ export default function AideFinancePage() {
                       <li>Après-midi 14h00 - 18h00 sans contrat : 30 €</li>
                       <li>Journée vacances sans contrat : 50 €</li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </section>
               <div className="finance-modal__actions">
