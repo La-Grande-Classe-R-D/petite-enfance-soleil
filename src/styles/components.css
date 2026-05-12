@@ -1368,11 +1368,13 @@
 }
 .finance-modal__title-child{
   font-size: 1.5rem;
+ 
 }
 .finance-modal__title {
   max-width: 34rem;
   font-size: clamp(1.35rem, 2vw, 2rem);
   line-height: 1.2;
+  text-align: center;
   color: #17324d;
 }
 
