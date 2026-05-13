@@ -122,7 +122,7 @@ export function Footer() {
   const socialLinks = [
     { icon: TikTokIcon, href: "https://www.tiktok.com/@lagrandeclasseofficiel", label: "TikTok" },
     { icon: Instagram, href: "https://www.instagram.com/lagrandeclasseidf/", label: "Instagram" },
-    { icon: Linkedin, href: "https://www.linkedin.com/company/grande-classe/", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/23704594/", label: "LinkedIn" },
   ];
 
   const partners = [
@@ -338,7 +338,7 @@ export function Footer() {
                   href={social.href}
                   className="footer__social-link"
                   aria-label={social.label}
-                  target="_blank"
+                  target="blank"
                   rel="noopener noreferrer"
                 >
                   <social.icon className="footer__social-icon" aria-hidden="true" />
