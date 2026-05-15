@@ -1573,10 +1573,42 @@
   text-decoration-color: var(--green-primary);
 }
 
-.salon-modal .footer-modal__overlay {
+.salon-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+}
+
+.salon-modal.is-open {
+  animation: footerModalFadeIn 0.26s ease forwards;
+}
+
+.salon-modal.is-closing {
+  animation: footerModalFadeOut 0.26s ease forwards;
+}
+
+.salon-modal__overlay {
+  position: absolute;
+  inset: 0;
   background:
     radial-gradient(circle at top left, rgba(47, 143, 70, 0.18), transparent 40%),
     rgba(15, 23, 42, 0.68);
+  border: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.salon-modal.is-open .salon-modal__overlay {
+  animation: footerModalFadeIn 0.26s ease forwards;
+}
+
+.salon-modal.is-closing .salon-modal__overlay {
+  animation: footerModalFadeOut 0.26s ease forwards;
 }
 
 .salon-modal__content {

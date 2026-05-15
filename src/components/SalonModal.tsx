@@ -70,12 +70,12 @@ export function SalonModal({ isOpen, onClose, isClosing }: SalonModalProps) {
 
   if (!isOpen) return null;
 
-  const modalClass = `footer-modal salon-modal${isClosing ? ' is-closing' : ' is-open'}`;
+  const modalClass = `salon-modal${isClosing ? ' is-closing' : ' is-open'}`;
 
   return (
     <div className={modalClass} role="dialog" aria-modal="true" aria-labelledby="salon-modal-title">
       <button
-        className="footer-modal__overlay"
+        className="salon-modal__overlay"
         onClick={handleOverlayClick}
         aria-label="Fermer"
         tabIndex={-1}
