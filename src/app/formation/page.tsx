@@ -113,8 +113,8 @@ export default function FormationPage() {
             {modules.map((module) => (
               <article key={module.title} className="card formation-card">
                 <div className="card__body">
-                  <p className="formation-card__duration">{module.duration}</p>
                   <h3 className="card__title">{module.title}</h3>
+                  <p className="formation-card__duration">{module.duration}</p>
                   <p className="card__excerpt">{module.description}</p>
                 </div>
               </article>
