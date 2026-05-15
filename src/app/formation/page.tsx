@@ -83,7 +83,11 @@ export default function FormationPage() {
                   </div>
                 ))}
               </div>
-              <a className="button button--primary" href="mailto:contact@lagrandeclasse.fr?subject=Demande%20de%20programme%20complet">
+              <a
+                className="button button--primary"
+                href="/download/LGC_DOM_Programme_Anglais_Professionnel_30h_detailed.pdf"
+                download="LGC_Programme_Anglais_Professionnel_30h.pdf"
+              >
                 Demander le programme complet
               </a>
             </div>
