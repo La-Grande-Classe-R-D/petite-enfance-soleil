@@ -1,5 +1,9 @@
+'use client';
+
+import { useState, useCallback } from 'react';
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Calendar, Play } from "lucide-react";
+import { SalonModal } from "./SalonModal";
 
 interface NewsItem {
   id: number;
@@ -24,79 +28,103 @@ interface SidebarProps {
   podcasts: PodcastItem[];
 }
 
+const SALON_NEWS_ID = 3;
+
 export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
+  const [salonOpen, setSalonOpen] = useState(false);
+  const [salonClosing, setSalonClosing] = useState(false);
+
+  const openSalon = useCallback(() => {
+    setSalonOpen(true);
+    setSalonClosing(false);
+  }, []);
+
+  const closeSalon = useCallback(() => {
+    setSalonClosing(true);
+    setTimeout(() => {
+      setSalonOpen(false);
+      setSalonClosing(false);
+    }, 260);
+  }, []);
+
   return (
-    <aside className="sidebar">
-      {/* ActualitＴ */}
-      <div className="sidebar-card">
-        <h3 className="sidebar-card__title">
-          Actualités
-        </h3>
-        <div className="sidebar-list">
-          {newsItems.map((item) => (
-            <div key={item.id} className="sidebar-item">
-              <div className="sidebar-item__media">
-                <ImageWithFallback
-                  src={item.imageUrl}
-                  alt={item.title}
-                  className="sidebar-item__image"
-                />
-              </div>
-              <p className="sidebar-item__text line-clamp-3">
-                {item.title}
-              </p>
-            </div>
-          ))}
+    <>
+      <aside className="sidebar">
+        {/* Actualités */}
+        <div className="sidebar-card">
+          <h3 className="sidebar-card__title">
+            Actualités
+          </h3>
+          <div className="sidebar-list">
+            {newsItems.map((item) => {
+              const isSalon = item.id === SALON_NEWS_ID;
+              return (
+                <div
+                  key={item.id}
+                  className={`sidebar-item${isSalon ? ' sidebar-item--clickable' : ''}`}
+                  onClick={isSalon ? openSalon : undefined}
+                  role={isSalon ? 'button' : undefined}
+                  tabIndex={isSalon ? 0 : undefined}
+                  onKeyDown={isSalon ? (e) => { if (e.key === 'Enter' || e.key === ' ') openSalon(); } : undefined}
+                  aria-label={isSalon ? `Lire l'article : ${item.title}` : undefined}
+                >
+                  <div className="sidebar-item__media">
+                    <ImageWithFallback
+                      src={item.imageUrl}
+                      alt={item.title}
+                      className="sidebar-item__image"
+                    />
+                  </div>
+                  <p className={`sidebar-item__text line-clamp-3${isSalon ? ' sidebar-item__text--link' : ''}`}>
+                    {item.title}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
 
-      {/* Revue de presse / Abonnement */}
-
-
-      {/* Agenda */}
-      <div className="sidebar-card">
-        <h3 className="sidebar-card__title">
-          <Calendar className="sidebar-card__icon" aria-hidden="true" />
-          Agenda
-        </h3>
-        <div className="sidebar-agenda">
-          {agendaItems.map((item) => (
-            <div
-              key={item.id}
-              className="sidebar-agenda__item"
-            >
-              <div className="sidebar-agenda__date">
-                {item.date}
+        {/* Agenda */}
+        <div className="sidebar-card">
+          <h3 className="sidebar-card__title">
+            <Calendar className="sidebar-card__icon" aria-hidden="true" />
+            Agenda
+          </h3>
+          <div className="sidebar-agenda">
+            {agendaItems.map((item) => (
+              <div key={item.id} className="sidebar-agenda__item">
+                <div className="sidebar-agenda__date">
+                  {item.date}
+                </div>
+                <p className="sidebar-agenda__title">
+                  {item.title}
+                </p>
               </div>
-              <p className="sidebar-agenda__title">
-                {item.title}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Podcasts */}
-      <div className="sidebar-card">
-        <h3 className="sidebar-card__title">
-          Informations suppléntaires
-        </h3>
-        <div className="sidebar-podcast">
-          {podcasts.map((podcast) => (
-            <div
-              key={podcast.id}
-              className="sidebar-podcast__item"
-            >
-              <div className="sidebar-podcast__icon">
-                <Play className="sidebar-podcast__icon-svg" aria-hidden="true" />
+        {/* Informations supplémentaires */}
+        <div className="sidebar-card">
+          <h3 className="sidebar-card__title">
+            Informations suppléntaires
+          </h3>
+          <div className="sidebar-podcast">
+            {podcasts.map((podcast) => (
+              <div key={podcast.id} className="sidebar-podcast__item">
+                <div className="sidebar-podcast__icon">
+                  <Play className="sidebar-podcast__icon-svg" aria-hidden="true" />
+                </div>
+                <p className="sidebar-podcast__text">
+                  {podcast.title}
+                </p>
               </div>
-              <p className="sidebar-podcast__text">
-                {podcast.title}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </aside>
+      </aside>
+
+      <SalonModal isOpen={salonOpen} onClose={closeSalon} isClosing={salonClosing} />
+    </>
   );
 }

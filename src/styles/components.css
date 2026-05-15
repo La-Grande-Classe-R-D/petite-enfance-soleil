@@ -1555,6 +1555,235 @@
 }
 
 /* ========================================
+   SALON MODAL
+   ======================================== */
+
+.sidebar-item--clickable {
+  cursor: pointer;
+}
+
+.sidebar-item__text--link {
+  color: var(--green-primary);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.sidebar-item--clickable:hover .sidebar-item__text--link {
+  text-decoration-color: var(--green-primary);
+}
+
+.salon-modal .footer-modal__overlay {
+  background:
+    radial-gradient(circle at top left, rgba(47, 143, 70, 0.18), transparent 40%),
+    rgba(15, 23, 42, 0.68);
+}
+
+.salon-modal__content {
+  position: relative;
+  width: min(50rem, 100%);
+  display: flex;
+  flex-direction: column;
+  max-height: min(90vh, 54rem);
+  padding: 0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.28);
+  border: 1px solid rgba(47, 143, 70, 0.15);
+  opacity: 0;
+  transform: translateY(12px) scale(0.985);
+}
+
+.salon-modal.is-open .salon-modal__content {
+  animation: footerModalContentIn 0.26s ease forwards;
+}
+
+.salon-modal.is-closing .salon-modal__content {
+  animation: footerModalContentOut 0.26s ease forwards;
+}
+
+.salon-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 1.25rem;
+  background: linear-gradient(135deg, rgba(47, 143, 70, 0.12) 0%, rgba(255, 200, 61, 0.22) 100%);
+  border-bottom: 1px solid rgba(47, 143, 70, 0.14);
+}
+
+.salon-modal__header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.salon-modal__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background-color: rgba(47, 143, 70, 0.12);
+  color: var(--green-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
+.salon-modal__title {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  color: var(--text-black);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.salon-modal__title-accent {
+  color: var(--green-primary);
+}
+
+.salon-modal__subtitle {
+  font-size: 0.9rem;
+  font-family: var(--font-open-sans), system-ui, sans-serif;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.salon-modal__close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: var(--green-primary);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.salon-modal__close:hover {
+  background-color: var(--green-primary-hover);
+}
+
+.salon-modal__body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1.25rem 1.5rem;
+}
+
+.salon-modal__body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.salon-modal__body::-webkit-scrollbar-track {
+  background: var(--gray-light);
+}
+
+.salon-modal__body::-webkit-scrollbar-thumb {
+  background: rgba(47, 143, 70, 0.35);
+  border-radius: 999px;
+}
+
+.salon-modal__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.salon-modal__item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(47, 143, 70, 0.14);
+  border-radius: 0.875rem;
+  background-color: rgba(247, 247, 247, 0.6);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.salon-modal__item:hover {
+  border-color: rgba(47, 143, 70, 0.35);
+  background-color: rgba(47, 143, 70, 0.04);
+}
+
+.salon-modal__item-date {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 9rem;
+  font-size: 0.8rem;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--green-primary);
+  padding-top: 0.1rem;
+}
+
+.salon-modal__item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.salon-modal__item-name {
+  font-size: 0.95rem;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-weight: 600;
+  color: var(--text-black);
+  margin: 0;
+}
+
+.salon-modal__item-city {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  font-family: var(--font-open-sans), system-ui, sans-serif;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.salon-modal__item-desc {
+  font-size: 0.85rem;
+  font-family: var(--font-open-sans), system-ui, sans-serif;
+  color: var(--text-gray);
+  line-height: 1.5;
+  margin: 0.2rem 0 0;
+}
+
+@media (max-width: 600px) {
+  .salon-modal__item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .salon-modal__item-date {
+    min-width: auto;
+  }
+
+  .salon-modal__content {
+    border-radius: 0.75rem;
+  }
+
+  .salon-modal__header,
+  .salon-modal__body {
+    padding: 1rem;
+  }
+}
+
+/* ========================================
    CHATBOT MODAL
    ======================================== */
 
