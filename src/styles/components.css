@@ -1563,13 +1563,14 @@
 }
 
 .sidebar-item__text--link {
-  color: var(--green-primary);
+  color: inherit;
   text-decoration: underline;
   text-decoration-color: transparent;
-  transition: text-decoration-color 0.15s ease;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 .sidebar-item--clickable:hover .sidebar-item__text--link {
+  color: var(--green-primary);
   text-decoration-color: var(--green-primary);
 }
 
