@@ -106,8 +106,7 @@ export default function ReglementationPage() {
             <div className="formation-banner__text">
               <h2>Pourquoi cette rubrique ?</h2>
               <p>
-                Centraliser des contenus fictifs faciles à lire pour aider les
-                professionnels à visualiser les obligations, les procédures et les
+                Centraliser, visualiser les obligations, les procédures et les
                 points de vigilance d'une structure petite enfance.
               </p>
             </div>

@@ -106,7 +106,7 @@ export default function PedagogiePage() {
             <div className="formation-banner__text">
               <h2>Intention pédagogique</h2>
               <p>
-                Proposer des contenus fictifs qui rendent les approches éducatives
+                Proposer des contenus éducatives
                 plus lisibles, plus concrètes et directement transposables dans une
                 structure d'accueil.
               </p>

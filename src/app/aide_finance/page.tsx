@@ -293,8 +293,8 @@ export default function AideFinancePage() {
             <div className="formation-banner__text">
               <h2>Pourquoi cette rubrique ?</h2>
               <p>
-                Aider les parents à mieux comprendre, de manière fictive et
-                simplifiée, les dispositifs qui peuvent réduire le coût réel de la
+                Aider les parents à mieux comprendre, et
+                simplifier, les dispositifs qui peuvent réduire le coût réel de la
                 garde à domicile et sécuriser leur organisation.
               </p>
             </div>
