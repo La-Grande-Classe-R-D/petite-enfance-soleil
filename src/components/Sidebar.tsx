@@ -57,17 +57,32 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
           </h3>
           <div className="sidebar-list">
             {newsItems.map((item) => {
-              const isSalon = item.id === SALON_NEWS_ID;
+              if (item.id === SALON_NEWS_ID) {
+                return (
+                  <div
+                    key={item.id}
+                    className="sidebar-item sidebar-item--clickable"
+                    onClick={openSalon}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') openSalon(); }}
+                    aria-label={`Lire l'article : ${item.title}`}
+                  >
+                    <div className="sidebar-item__media">
+                      <ImageWithFallback
+                        src={item.imageUrl}
+                        alt={item.title}
+                        className="sidebar-item__image"
+                      />
+                    </div>
+                    <p className="sidebar-item__text line-clamp-3 sidebar-item__text--link">
+                      {item.title}
+                    </p>
+                  </div>
+                );
+              }
               return (
-                <div
-                  key={item.id}
-                  className={`sidebar-item${isSalon ? ' sidebar-item--clickable' : ''}`}
-                  onClick={isSalon ? openSalon : undefined}
-                  role={isSalon ? 'button' : undefined}
-                  tabIndex={isSalon ? 0 : undefined}
-                  onKeyDown={isSalon ? (e) => { if (e.key === 'Enter' || e.key === ' ') openSalon(); } : undefined}
-                  aria-label={isSalon ? `Lire l'article : ${item.title}` : undefined}
-                >
+                <div key={item.id} className="sidebar-item">
                   <div className="sidebar-item__media">
                     <ImageWithFallback
                       src={item.imageUrl}
@@ -75,7 +90,7 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
                       className="sidebar-item__image"
                     />
                   </div>
-                  <p className={`sidebar-item__text line-clamp-3${isSalon ? ' sidebar-item__text--link' : ''}`}>
+                  <p className="sidebar-item__text line-clamp-3">
                     {item.title}
                   </p>
                 </div>
