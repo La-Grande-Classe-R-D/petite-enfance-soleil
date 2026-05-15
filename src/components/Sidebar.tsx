@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react';
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Calendar, Play } from "lucide-react";
 import { SalonModal } from "./SalonModal";
+import { HygieneModal } from "./HygieneModal";
 
 interface NewsItem {
   id: number;
@@ -29,10 +30,13 @@ interface SidebarProps {
 }
 
 const SALON_NEWS_ID = 3;
+const HYGIENE_NEWS_ID = 1;
 
 export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
   const [salonOpen, setSalonOpen] = useState(false);
   const [salonClosing, setSalonClosing] = useState(false);
+  const [hygieneOpen, setHygieneOpen] = useState(false);
+  const [hygieneClosing, setHygieneClosing] = useState(false);
 
   const openSalon = useCallback(() => {
     setSalonOpen(true);
@@ -47,6 +51,19 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
     }, 260);
   }, []);
 
+  const openHygiene = useCallback(() => {
+    setHygieneOpen(true);
+    setHygieneClosing(false);
+  }, []);
+
+  const closeHygiene = useCallback(() => {
+    setHygieneClosing(true);
+    setTimeout(() => {
+      setHygieneOpen(false);
+      setHygieneClosing(false);
+    }, 260);
+  }, []);
+
   return (
     <>
       <aside className="sidebar">
@@ -57,15 +74,17 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
           </h3>
           <div className="sidebar-list">
             {newsItems.map((item) => {
-              if (item.id === SALON_NEWS_ID) {
+              const isClickable = item.id === SALON_NEWS_ID || item.id === HYGIENE_NEWS_ID;
+              const handleClick = item.id === SALON_NEWS_ID ? openSalon : item.id === HYGIENE_NEWS_ID ? openHygiene : undefined;
+              if (isClickable) {
                 return (
                   <div
                     key={item.id}
                     className="sidebar-item sidebar-item--clickable"
-                    onClick={openSalon}
+                    onClick={handleClick}
                     role="button"
                     tabIndex={0}
-                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') openSalon(); }}
+                    onKeyDown={(e) => { if ((e.key === 'Enter' || e.key === ' ') && handleClick) handleClick(); }}
                     aria-label={`Lire l'article : ${item.title}`}
                   >
                     <div className="sidebar-item__media">
@@ -140,6 +159,7 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
       </aside>
 
       <SalonModal isOpen={salonOpen} onClose={closeSalon} isClosing={salonClosing} />
+      <HygieneModal isOpen={hygieneOpen} onClose={closeHygiene} isClosing={hygieneClosing} />
     </>
   );
 }
