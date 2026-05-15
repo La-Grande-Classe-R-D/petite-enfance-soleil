@@ -2,28 +2,40 @@ import Image from "next/image";
 
 const modules = [
   {
-    title: "Formations professionnelles en anglais (CPF)",
-    duration: "14 heures",
+    title: "Module 1",
+    duration: "Évaluation & Bases 3 heures",
     description:
-      "Comprendre le rôle professionnel, la relation avec les familles et les responsabilités quotidiennes.",
+      "Présentations, horaires, expressions courantes.",
   },
   {
-    title: "Sécurité et premiers gestes",
-    duration: "21 heures",
+    title: "Module 2",
+    duration: "Anglais Professionnel 5 heures",
     description:
-      "Prévention des accidents domestiques, réactions d'urgence et gestes de premiers secours adaptés aux tout-petits.",
+      "Responsabilités professionnelles, routines, vocabulaire métier.",
   },
   {
-    title: "Éveil et activités pédagogiques",
-    duration: "18 heures",
+    title: "Module 3",
+    duration: "Communication Professionnelle 5 heures",
     description:
-      "Créer des activités adaptées à l'âge de l'enfant pour développer l'autonomie, la motricité et le langage.",
+      "Téléphone, réunions, emails professionnels.",
   },
   {
-    title: "Communication avec les parents",
-    duration: "12 heures",
+    title: "Module 4",
+    duration: "Small Talk & Communication Sociale 4 heures",
     description:
       "Construire une relation de confiance avec les familles et assurer un suivi quotidien clair et bienveillant.",
+  },
+  {
+    title: "Module 5",
+    duration: "Service Client & Résolution de Problèmes 5 heures",
+    description:
+      "Réclamations, solutions, vocabulaire accueil/service.",
+  },
+  {
+    title: "Module 6",
+    duration: "Préparation Bright Language 5 heures",
+    description:
+      "Compréhension orale/écrite, grammaire, exercices type Bright.",
   },
 ];
 
@@ -44,10 +56,26 @@ export default function FormationPage() {
               <p className="formation-kicker">Formation professionnelle</p>
               <h1>Formations professionnelles en anglais (CPF)</h1>
               <p className="formation-lead">
-                Un parcours fictif pour renforcer les compétences clés des nounous:
-                sécurité, éveil de l&apos;enfant, communication avec les parents et
-                organisation du quotidien.
+                Développez vos compétences en anglais professionnel et préparez la certification Bright Language grâce à une
+                formation pratique et personnalisée adaptée à vos objectifs professionnels. Notre formation met l’accent sur la
+                communication réelle dans des situations professionnelles. Chaque apprenant suit un parcours personnalisé
+                adapté à son niveau, son métier et ses objectifs. Le programme combine expression orale, compréhension
+                orale et écrite, grammaire, vocabulaire professionnel et mises en situation concrètes.
               </p>
+              <h2>Présentation du Programme</h2>
+              <ul className="formation-lead">
+                <li><strong>Durée</strong> : 30 heures</li>
+                <li><strong>Format</strong> : Formation individuelle ou en petit groupe, en présentiel et/ou en ligne.</li>
+                <li><strong>Public</strong> : Salariés, demandeurs d’emploi, professionnels souhaitant évoluer à l’international.</li>
+                <li><strong>Niveaux</strong> : A1 à B2 selon le CECRL.</li>
+                <li><strong>Certification</strong> : Certification officielle Bright Language (éligible CPF).</li>
+              </ul>
+                <h2>Objectifs de la Formation</h2>
+                <p className="formation-lead">
+                  Communiquer dans des situations professionnelles Comprendre l’anglais oral et écrit Rédiger des emails
+                  professionnels Participer à des réunions et appels Renforcer grammaire et vocabulaire Préparer la certification
+                  Bright Language
+                </p>
               <div className="formation-highlights">
                 {highlights.map((item) => (
                   <div key={item} className="formation-highlight">
