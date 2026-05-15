@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import { X, MapPin, Calendar } from 'lucide-react';
 
 const salons = [
@@ -72,7 +73,7 @@ export function SalonModal({ isOpen, onClose, isClosing }: SalonModalProps) {
 
   const modalClass = `salon-modal${isClosing ? ' is-closing' : ' is-open'}`;
 
-  return (
+  return createPortal(
     <div className={modalClass} role="dialog" aria-modal="true" aria-labelledby="salon-modal-title">
       <button
         className="salon-modal__overlay"
@@ -121,6 +122,7 @@ export function SalonModal({ isOpen, onClose, isClosing }: SalonModalProps) {
           </ul>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
