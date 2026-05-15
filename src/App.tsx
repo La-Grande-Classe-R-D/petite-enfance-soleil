@@ -172,23 +172,23 @@ export default function App() {
   const agendaItems = [
     {
       id: 1,
-      date: "15 Nov",
-      title: "Webinaire : Gérer les émotions des tout-petits",
+      date: "20 Mai",
+      title: "Webinaire : Accueil inclusif — enfants à besoins particuliers",
     },
     {
       id: 2,
-      date: "22 Nov",
-      title: "Formation : Langage des signes avec bébé",
+      date: "03 Juin",
+      title: "Formation : Premiers secours pédiatriques",
     },
     {
       id: 3,
-      date: "05 Déc",
-      title: "Conférence : Neurosciences et petite enfance",
+      date: "17 Juin",
+      title: "Atelier : Éveil musical 0–3 ans",
     },
     {
       id: 4,
-      date: "12 Déc",
-      title: "Atelier : Activités sensorielles d'hiver",
+      date: "10 Juil",
+      title: "Conférence : Accompagner les familles en difficulté",
     },
   ];
 
