@@ -37,7 +37,7 @@ export function Header({ isVisible = true }: HeaderProps) {
         <div className="header-main__inner">
           <Link href="/" className="header-logo" aria-label="Retour à l'accueil">
             <Image
-              src="/asset/logo-trasparent.png"
+              src="/asset/logo-transparent.png"
               alt="Logo La Petite Enfance"
               className="header-logo__icon"
               width={88}

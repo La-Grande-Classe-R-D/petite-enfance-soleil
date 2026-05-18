@@ -32,11 +32,11 @@ const baloo = Baloo_2({
 
 export const metadata: Metadata = {
   title: "La grande classe - Petite enfance",
-  description: "Actualitées et dossiers de la petite enfance",
+  description: "Actualités et dossiers de la petite enfance",
   openGraph: {
     title: "La grande classe - Petite enfance",
-    description: "Actualitées et dossiers de la petite enfance",
-    url: "https://petite-enfance.lagrandeclasse.fr",
+    description: "Actualités et dossiers de la petite enfance",
+    url: "https://lgc-jeunesse.lagrandeclasse.fr",
     siteName: "La grande classe - Petite enfance",
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "La grande classe - Petite enfance",
-    description: "Actualitées et dossiers de la petite enfance",
+    description: "Actualités et dossiers de la petite enfance",
     images: ["/asset/icone-lgc.png"],
   },
   icons: {

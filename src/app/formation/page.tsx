@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Formation petite enfance | LGC Jeunesse",
+  description: "Formations professionnelles en anglais (CPF) pour les professionnels de la petite enfance. Certification Bright Language, parcours personnalisé.",
+};
 
 const modules = [
   {

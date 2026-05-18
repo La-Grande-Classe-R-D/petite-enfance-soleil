@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Pédagogie petite enfance | LGC Jeunesse",
+  description: "Approches et propositions pédagogiques adaptées à la petite enfance : jeu libre, langage, activités sensorielles et autonomie progressive.",
+};
 
 const approaches = [
   {

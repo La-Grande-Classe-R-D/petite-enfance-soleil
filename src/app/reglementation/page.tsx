@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Réglementation petite enfance | LGC Jeunesse",
+  description: "Cadre réglementaire pour les structures d'accueil de la petite enfance : sécurité, hygiène, documents obligatoires et communication avec les familles.",
+};
 
 const themes = [
   {

@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Pratiques professionnelles petite enfance | LGC Jeunesse",
+  description: "Repères du quotidien pour les professionnels de la petite enfance : organisation, observation, travail en équipe et relation avec les familles.",
+};
 
 const practices = [
   {

@@ -45,7 +45,8 @@ export function VideoHero() {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="none"
+        poster="/asset/poster-hero.jpg"
         aria-hidden="true"
       >
         <source src="/asset/lgc-jeunesse-video.mp4" type="video/mp4" />

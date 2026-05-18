@@ -114,7 +114,7 @@ export function Footer() {
   }> = [
     { label: "La grande classe", href: "https://lagrandeclasse.fr", newTab: true },
     { label: "Qui sommes-nous ?", href: "https://lagrandeclasse.fr/", newTab: true },
-    { label: "Mentions legales", modal: "legal" },
+    { label: "Mentions légales", href: "/mentions-legales" },
     { label: "Plan du site", modal: "sitemap" },
     { label: "Contact", modal: "contact" },
   ];
@@ -365,7 +365,7 @@ export function Footer() {
                 <div className="footer-modal__header">
                   <h2 className="footer-modal__title" id={modalContent.titleId}>
                     <Image
-                      src="/asset/logo-trasparent.png"
+                      src="/asset/logo-transparent.png"
                       alt=""
                       className="footer-modal__logo"
                       aria-hidden="true"
