@@ -114,7 +114,7 @@ export function Footer() {
   }> = [
     { label: "La grande classe", href: "https://lagrandeclasse.fr", newTab: true },
     { label: "Qui sommes-nous ?", href: "https://lagrandeclasse.fr/", newTab: true },
-    { label: "Mentions légales", href: "/mentions-legales" },
+    { label: "Mentions légales", modal: "legal" },
     { label: "Plan du site", modal: "sitemap" },
     { label: "Contact", modal: "contact" },
   ];
