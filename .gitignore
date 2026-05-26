@@ -11,3 +11,5 @@ tmp_*.ps1
 tmp_*.txt
 AGENTS.md
 CLAUDE.md
+rapport-wcag.html
+*.pdf
