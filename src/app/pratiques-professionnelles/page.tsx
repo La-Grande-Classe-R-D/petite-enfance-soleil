@@ -61,9 +61,13 @@ export default function PratiquesProfessionnellesPage() {
                   </div>
                 ))}
               </div>
-              <button type="button" className="button button--primary">
+              <a
+                href="/api/pdf/pratiques"
+                download="fiches-metier-pratiques-professionnelles.pdf"
+                className="button button--primary"
+              >
                 Consulter les fiches métiers
-              </button>
+              </a>
             </div>
             <div className="formation-hero__media">
               <Image
@@ -110,11 +114,12 @@ export default function PratiquesProfessionnellesPage() {
                 loading="lazy"
               />
             <div className="formation-banner__text">
-              <h2>Objectif de la rubrique</h2>
+              <h2>5 fiches métier à portée de main</h2>
               <p>
-                Donner une vision simple et concrète des gestes professionnels qui
-                soutiennent l'accueil, la continuité éducative et la qualité de
-                présence auprès des jeunes enfants.
+                Organisation de la journée, observation de l'enfant, travail en
+                équipe, relation avec les familles, posture éthique — les fiches
+                téléchargeables rassemblent les repères essentiels pour chaque
+                situation du quotidien professionnel.
               </p>
             </div>
           </div>

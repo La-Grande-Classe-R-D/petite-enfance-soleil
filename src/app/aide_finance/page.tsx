@@ -291,11 +291,11 @@ export default function AideFinancePage() {
               loading="lazy"
             />
             <div className="formation-banner__text">
-              <h2>Pourquoi cette rubrique ?</h2>
+              <h2>CAF, crédit d'impôt, aides employeur : cumulables</h2>
               <p>
-                Aider les parents à mieux comprendre, et
-                simplifier, les dispositifs qui peuvent réduire le coût réel de la
-                garde à domicile et sécuriser leur organisation.
+                La plupart des dispositifs présentés ici sont cumulables.
+                Un foyer éligible peut réduire sa facture de garde jusqu'à 85 % du coût brut.
+                Notre accompagnement administratif vous aide à ne rien laisser sur la table.
               </p>
             </div>
           </div>
