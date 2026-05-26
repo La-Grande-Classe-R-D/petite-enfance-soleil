@@ -48,7 +48,7 @@ export default function PedagogiePage() {
           <div className="formation-hero__content">
             <div className="formation-hero__text">
               <p className="formation-kicker">Ateliers d’anglais – Méthodologie</p>
-              <h1>Approches et propositions pédagigique</h1>
+              <h1>Approches et propositions pédagogique</h1>
               <p className="formation-lead">
                 Une page fictive pour mettre en avant des approches pédagogiques
                 adaptées à la petite enfance, avec des exemples d'activités, de

@@ -24,7 +24,7 @@ export function Header({ isVisible = true }: HeaderProps) {
     },
     { label: "Pédagogie", href: "/pedagogie", matchPath: "/pedagogie" },
     { label: "Aides Financières ", href: "/aide_finance", matchPath: "/aide_finance" },
-  
+    { label: "Nous contacter", href: "mailto:amel.benhamdi@grandeclasse.fr", matchPath: "" },
   ];
 
   useEffect(() => {
