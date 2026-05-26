@@ -61,9 +61,13 @@ export default function ReglementationPage() {
                   </div>
                 ))}
               </div>
-              <button type="button" className="button button--primary">
+              <a
+                href="/api/pdf/reglementation"
+                download="fiche-pratique-reglementation-petite-enfance.pdf"
+                className="button button--primary"
+              >
                 Télécharger la fiche pratique
-              </button>
+              </a>
             </div>
             <div className="formation-hero__media">
               <Image
