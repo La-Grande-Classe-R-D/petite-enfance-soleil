@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Rate limiting en mémoire : ip → [timestamps]
 const ipSubmissions = new Map<string, number[]>();
 const RATE_LIMIT_MAX = 3;
@@ -20,6 +18,8 @@ function isRateLimited(ip: string): boolean {
 }
 
 export async function POST(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     const body = await req.json();
     const { nom, email, telephone, message, _hp, _t } = body as {
