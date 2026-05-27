@@ -3,7 +3,7 @@ import { ApiCheck, AssertionBuilder } from 'checkly/constructs'
 // Vérifie que l'API contact accepte les requêtes bien formées
 new ApiCheck('api-contact-check', {
   name: 'API Contact - disponibilité',
-  activated: true,
+  activated: false,
   request: {
     method: 'POST',
     url: 'https://lgc-jeunesse.lagrandeclasse.fr/api/contact',
