@@ -2,10 +2,12 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Header } from "./Header";
+import { ContactModal } from "./ContactModal";
 
 export function HeaderWrapper() {
   const pathname = usePathname();
   const [showHeader, setShowHeader] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -24,5 +26,16 @@ export function HeaderWrapper() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
-  return <Header isVisible={showHeader} />;
+  return (
+    <>
+      <Header
+        isVisible={showHeader}
+        onContactOpen={() => setIsContactOpen(true)}
+      />
+      <ContactModal
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
+    </>
+  );
 }
