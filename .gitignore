@@ -13,3 +13,5 @@ AGENTS.md
 CLAUDE.md
 rapport-wcag.html
 *.pdf
+tsconfig.tsbuildinfo
+next-env.d.ts
