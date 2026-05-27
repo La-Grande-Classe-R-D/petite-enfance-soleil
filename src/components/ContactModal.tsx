@@ -17,11 +17,14 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [telephone, setTelephone] = useState("");
   const [message, setMessage] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
   const firstInputRef = useRef<HTMLInputElement>(null);
+  const formOpenTime = useRef<number>(0);
 
   useEffect(() => {
     if (isOpen) {
       setIsVisible(true);
+      formOpenTime.current = Date.now();
       document.body.style.overflow = "hidden";
       setTimeout(() => firstInputRef.current?.focus(), 300);
     } else {
@@ -34,6 +37,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         setEmail("");
         setTelephone("");
         setMessage("");
+        setHoneypot("");
       }, 300);
       return () => clearTimeout(t);
     }
@@ -62,7 +66,14 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nom, email, telephone, message }),
+        body: JSON.stringify({
+          nom,
+          email,
+          telephone,
+          message,
+          _hp: honeypot,
+          _t: Date.now() - formOpenTime.current,
+        }),
       });
       const data = await res.json();
 
@@ -129,6 +140,20 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         ) : (
           <div className="contact-modal__body">
             <form className="contact-modal__form" onSubmit={handleSubmit} noValidate>
+              {/* honeypot: invisible pour les humains, les bots le remplissent */}
+              <div style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }} aria-hidden="true">
+                <label htmlFor="contact-website">Ne pas remplir</label>
+                <input
+                  id="contact-website"
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                />
+              </div>
+
               <div className="contact-modal__field">
                 <label className="contact-modal__label" htmlFor="contact-nom">
                   Nom complet <span aria-hidden="true">*</span>
