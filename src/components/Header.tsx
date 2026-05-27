@@ -7,16 +7,16 @@ import { useEffect, useState } from "react";
 
 interface HeaderProps {
   isVisible?: boolean;
+  onContactOpen?: () => void;
 }
 
-export function Header({ isVisible = true }: HeaderProps) {
+export function Header({ isVisible = true, onContactOpen }: HeaderProps) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navItems = [
+  const navLinks = [
     { label: "Petite Enfance", href: "/#menu-nav", matchPath: "/" },
     { label: "Formation", href: "/formation", matchPath: "/formation" },
     { label: "Réglementation", href: "/reglementation", matchPath: "/reglementation" },
-    
     {
       label: "Pratiques professionnelles",
       href: "/pratiques-professionnelles",
@@ -24,7 +24,6 @@ export function Header({ isVisible = true }: HeaderProps) {
     },
     { label: "Pédagogie", href: "/pedagogie", matchPath: "/pedagogie" },
     { label: "Aides Financières ", href: "/aide_finance", matchPath: "/aide_finance" },
-    { label: "Nous contacter", href: "mailto:amel.benhamdi@grandeclasse.fr", matchPath: "" },
   ];
 
   useEffect(() => {
@@ -68,7 +67,7 @@ export function Header({ isVisible = true }: HeaderProps) {
       >
         <div className="header-nav__inner">
           <ul className="header-nav__list">
-            {navItems.map((item) => (
+            {navLinks.map((item) => (
               <li key={item.label}>
                 <Link
                   href={item.href}
@@ -80,6 +79,18 @@ export function Header({ isVisible = true }: HeaderProps) {
                 </Link>
               </li>
             ))}
+            <li>
+              <button
+                type="button"
+                className="header-nav__link header-nav__link--contact"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  onContactOpen?.();
+                }}
+              >
+                Nous contacter
+              </button>
+            </li>
           </ul>
         </div>
       </nav>
