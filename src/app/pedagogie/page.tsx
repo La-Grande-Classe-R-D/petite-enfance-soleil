@@ -61,9 +61,9 @@ export default function PedagogiePage() {
                   </div>
                 ))}
               </div>
-              <button type="button" className="button button--primary">
+              <a href="#pistes-pedagogiques" className="button button--primary">
                 Voir les propositions éducatives
-              </button>
+              </a>
             </div>
             <div className="formation-hero__media">
               <Image
@@ -82,7 +82,7 @@ export default function PedagogiePage() {
 
       <section className="section">
         <div className="container">
-          <h2 className="section-title section-title--lg">Pistes pédagogiques</h2>
+          <h2 id="pistes-pedagogiques" className="section-title section-title--lg">Pistes pédagogiques</h2>
           <div className="cards formation-cards">
             {approaches.map((approach) => (
               <article key={approach.title} className="card formation-card">
