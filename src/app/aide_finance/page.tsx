@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useFocusTrap } from "@/lib/useFocusTrap";
 
 const MODAL_EXIT_DURATION_MS = 260;
 
@@ -43,6 +44,9 @@ export default function AideFinancePage() {
   const [isEstimateModalOpen, setIsEstimateModalOpen] = useState(false);
   const [isEstimateModalRendered, setIsEstimateModalRendered] = useState(false);
   const [isEstimateModalClosing, setIsEstimateModalClosing] = useState(false);
+  const estimateDialogRef = useRef<HTMLDivElement>(null);
+
+  useFocusTrap(isEstimateModalOpen && !isEstimateModalClosing, estimateDialogRef);
 
   useEffect(() => {
     if (!isEstimateModalOpen) {
@@ -146,7 +150,7 @@ export default function AideFinancePage() {
             onClick={closeEstimateModal}
             aria-label="Fermer la fenetre"
           />
-          <div className="footer-modal__content finance-modal__content" role="document">
+          <div ref={estimateDialogRef} className="footer-modal__content finance-modal__content" role="document">
             <div className="footer-modal__header finance-modal__header">
               <div className="finance-modal__intro">
                 <div className="finance-modal__eyebrow-row">

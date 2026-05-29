@@ -48,7 +48,7 @@ export function Header({ isVisible = true, onContactOpen }: HeaderProps) {
           <button
             type="button"
             className={`header-menu-button${isMenuOpen ? " header-menu-button--open" : ""}`}
-        /*     aria-expanded={isMenuOpen} */
+            aria-expanded={isMenuOpen}
             aria-controls="primary-navigation"
             aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             onClick={() => setIsMenuOpen((open) => !open)}

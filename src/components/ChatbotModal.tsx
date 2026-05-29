@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { MessageCircle, X, Send, Bot, Sparkles } from 'lucide-react';
+import { useFocusTrap } from '@/lib/useFocusTrap';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -33,6 +34,9 @@ export function ChatbotModal() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  useFocusTrap(isOpen && !isClosing, dialogRef);
 
   useEffect(() => {
     if (messages.length > 0) {
@@ -110,10 +114,11 @@ export function ChatbotModal() {
           <div className="chatbot-modal__overlay" onClick={closeModal} aria-hidden="true" />
 
           <div
+            ref={dialogRef}
             className="chatbot-modal__content"
             role="dialog"
             aria-modal="true"
-            aria-label="Assistant Petite Enfance"
+            aria-labelledby="chatbot-modal-title"
           >
             <div className="chatbot-modal__header">
               <div className="chatbot-modal__header-info">
@@ -121,7 +126,7 @@ export function ChatbotModal() {
                   <Bot size={18} strokeWidth={2} />
                 </div>
                 <div>
-                  <h2 className="chatbot-modal__title">Assistant Petite Enfance</h2>
+                  <h2 id="chatbot-modal-title" className="chatbot-modal__title">Assistant Petite Enfance</h2>
                   <p className="chatbot-modal__subtitle">
                     <span className="chatbot-modal__status-dot" />
                     En ligne

@@ -309,10 +309,9 @@ export function Footer() {
                         onClick={(event: MouseEvent<HTMLButtonElement>) => {
                           openModal(link.modal ?? "legal", event.currentTarget);
                         }}
-                        // aria-expanded={activeModal === link.modal ? "true" : "false"}
+                        aria-expanded={activeModal === link.modal}
                         aria-haspopup="dialog"
-                  
-                        >
+                      >
                         {link.label}
                       </button>
                     ) : (
@@ -338,7 +337,7 @@ export function Footer() {
                   href={social.href}
                   className="footer__social-link"
                   aria-label={social.label}
-                  target="blank"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <social.icon className="footer__social-icon" aria-hidden="true" />

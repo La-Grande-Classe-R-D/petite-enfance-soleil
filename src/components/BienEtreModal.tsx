@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { X, Heart, Activity, Wind, Phone } from 'lucide-react';
+import { useFocusTrap } from '@/lib/useFocusTrap';
 
 const fiches = [
   {
@@ -42,6 +43,9 @@ interface BienEtreModalProps {
 }
 
 export function BienEtreModal({ isOpen, onClose, isClosing }: BienEtreModalProps) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  useFocusTrap(isOpen, dialogRef);
+
   useEffect(() => {
     if (!isOpen) return;
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
@@ -67,7 +71,7 @@ export function BienEtreModal({ isOpen, onClose, isClosing }: BienEtreModalProps
         aria-label="Fermer"
         tabIndex={-1}
       />
-      <div className="salon-modal__content">
+      <div ref={dialogRef} className="salon-modal__content">
         <div className="salon-modal__header">
           <div className="salon-modal__header-inner">
             <span className="salon-modal__eyebrow">
