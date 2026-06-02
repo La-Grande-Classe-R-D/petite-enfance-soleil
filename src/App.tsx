@@ -185,7 +185,7 @@ export default function App() {
       id: 3,
       date: "17 Juin",
       title: "Atelier : Éveil musical 0–3 ans",
-    },
+    },  
     {
       id: 4,
       date: "10 Juil",
