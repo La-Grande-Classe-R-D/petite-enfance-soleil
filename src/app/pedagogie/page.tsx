@@ -34,10 +34,12 @@ const approaches = [
 ];
 
 const values = [
-  "Inspirations pédagogiques simplifiées",
-  "Idées d'activités fictives par âge",
-  "Repères d'observation éducative",
-  "Supports pensés pour l'équipe terrain",
+  "Entretien individuel approfondi",
+  "Vérification des références",
+  "Sensibilisation sécurité et hygiène",
+  "Expérience auprès des enfants",
+  "Qualités humaines et bienveillance",
+  "Notre priorité : garantir à chaque famille une solution fiable, humaine et rassurante."
 ];
 
 export default function PedagogiePage() {
@@ -47,12 +49,11 @@ export default function PedagogiePage() {
         <div className="container">
           <div className="formation-hero__content">
             <div className="formation-hero__text">
-              <p className="formation-kicker">Ateliers d’anglais – Méthodologie</p>
-              <h1>Approches et propositions pédagogique</h1>
+              <p className="formation-kicker">Pourquoi nous faire confiance ?</p>
+              <h1>Une garde d’enfants pensée pour votre sérénité</h1>
               <p className="formation-lead">
-                Une page fictive pour mettre en avant des approches pédagogiques
-                adaptées à la petite enfance, avec des exemples d'activités, de
-                postures et d'environnements favorables aux apprentissages.
+                Nous savons qu’il est essentiel de confier ses enfants à une personne de confiance.
+C’est pourquoi chaque intervenant est recruté selon des critères exigeants :
               </p>
               <div className="formation-highlights">
                 {values.map((item) => (

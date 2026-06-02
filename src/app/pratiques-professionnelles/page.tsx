@@ -34,10 +34,14 @@ const practices = [
 ];
 
 const markers = [
-  "Présentiel/visio, individuel",
-  "Fiches pratiques fictives par situation",
-  "Repères de posture en équipe",
-  "Cas concrets pour les transmissions",
+  "Activités créatives",
+  "Histoires et lecture",
+  "Ateliers cuisine",
+  "Jeux éducatifs",
+  "Activités extérieures",
+  "Comptines et éveil",
+  "Chaque moment devient une expérience positive et épanouissante."
+
 ];
 
 export default function PratiquesProfessionnellesPage() {
@@ -48,11 +52,9 @@ export default function PratiquesProfessionnellesPage() {
           <div className="formation-hero__content">
             <div className="formation-hero__text">
               <p className="formation-kicker">Pratiques professionnelles</p>
-              <h1>Repères du quotidien</h1>
+              <h1>Des moments enrichissants pour vos enfants</h1>
               <p className="formation-lead">
-                Une page fictive consacrée aux pratiques professionnelles en petite
-                enfance: observation, travail en équipe, organisation et qualité
-                des échanges avec les familles.
+            Bien plus qu’une simple garde. Nos intervenants proposent des activités adaptées à l’âge et au rythme de chaque enfant :
               </p>
               <div className="formation-highlights">
                 {markers.map((item) => (
