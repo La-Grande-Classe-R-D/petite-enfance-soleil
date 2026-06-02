@@ -111,11 +111,17 @@ C’est pourquoi chaque intervenant est recruté selon des critères exigeants :
                 loading="lazy"
               />
             <div className="formation-banner__text">
-              <h2>Intention pédagogique</h2>
+              <h2>Objectif pédagogique : Comment ça fonctionne ?</h2>
               <p>
-                Proposer des contenus éducatives
-                plus lisibles, plus concrètes et directement transposables dans une
-                structure d'accueil.
+                Trouver votre intervenant en 4 étapes
+Vous nous expliquez vos besoins
+Horaires, âge des enfants, fréquence, attentes…
+Nous sélectionnons votre intervenant
+Un profil adapté à votre famille et à votre organisation.
+Vous rencontrez la personne
+Parce que la confiance est essentielle.
+La garde démarre sereinement
+Votre quotidien devient plus simple.
               </p>
             </div>
           </div>
