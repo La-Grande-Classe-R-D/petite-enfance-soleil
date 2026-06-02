@@ -230,7 +230,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <div className="contact-modal__phone">
               <p className="contact-modal__phone-label">Nous appeler directement</p>
               <a
-                href="tel:+33140102722"
+                href="tel:+33603177061"
                 className="contact-modal__phone-link"
               >
                 <svg
@@ -247,7 +247,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 >
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l1.62-1.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
-                01 40 10 27 22
+                +33 06 03 17 70 61
               </a>
             </div>
           </div>
