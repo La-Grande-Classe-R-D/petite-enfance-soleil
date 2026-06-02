@@ -34,10 +34,11 @@ const aids = [
 ];
 
 const highlights = [
-  "Estimer votre budget grâce à nos simulations",
-  "Identifier les aides de la CAF auxquelles vous avez droit",
-  "Comparer garde simple et garde partagée",
-  "Comprendre comment déclarer une garde occasionnelle",
+  "Une solution adaptée à chaque famille",
+  "Sortie d’école et de crèche",
+  "Mercredis et vacances scolaires",
+  "Jeux éducatifs",
+  "Garde régulière ou ponctuelle"
 ];
 
 export default function AideFinancePage() {
@@ -97,12 +98,12 @@ export default function AideFinancePage() {
           <div className="formation-hero__content">
             <div className="formation-hero__text">
               <p className="formation-kicker">Aides financières</p>
-              <h1>Les aides financières pour la garde d’enfants à domicile </h1>
+              <h1>Garde d’enfants à domicile</h1>
+
               <p className="formation-lead">
-               Choisir la garde d’enfants à domicile est souvent plus accessible 
-               qu’on ne le pense. Grâce aux aides disponibles, 
-               le coût peut être fortement réduit selon vos revenus,
-               l’âge de vos enfants et le nombre d’heures de garde.
+               Les aides financières pour la garde d’enfants à domicile 
+
+Nous nous occupons de toute la partie administrative
 
               </p>
               <div className="formation-highlights">
@@ -112,6 +113,7 @@ export default function AideFinancePage() {
                   </div>
                 ))}
               </div>
+
               <button
                 type="button"
                 className="button button--primary"
