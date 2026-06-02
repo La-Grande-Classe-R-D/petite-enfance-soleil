@@ -141,7 +141,7 @@ export default function App() {
       id: 4,
       title: "Crèche : entretiens annuels",
       excerpt: "Guide pratique pour mener les entretiens professionnels annuels dans les structures d'accueil de la petite enfance.",
-      imageUrl: "/asset/nursery-education.jpg",
+      imageUrl: "https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 5,
