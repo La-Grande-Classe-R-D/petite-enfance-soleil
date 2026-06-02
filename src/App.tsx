@@ -231,13 +231,10 @@ export default function App() {
               enfant(s).
             </p>
             <h2 className="section-title section-title--lg home-hook__title">
-              Nos valeurs 
+              Des professionnels bienveillants pour accompagner vos enfants au quotidien
             </h2>
             <p className="home-hook__text">
-              Placer nos clients et nos salariés au coeur de nos préoccupations est notre priorité. 
-              Nous sommes conscients que la satisfaction de nos clients passe par des interventions de qualité, 
-              ainsi notre organisation qui s’appuie sur 
-              les savoir-faire et savoir-être de notre personnel, permet de s’en assurer.
+              Sortie d’école, accompagnement du matin, mercredis ou vacances scolaires : nous trouvons la personne idéale pour prendre soin de vos enfants dans un cadre sécurisant, ludique et adapté à votre famille.
             </p>
           </div>
         </section>
