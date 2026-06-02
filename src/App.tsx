@@ -264,6 +264,35 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Témoignages */}
+      <section className="section section--light reveal" data-reveal>
+        <div className="container">
+          <h2 className="section-title section-title--lg" style={{ textAlign: "center", marginBottom: "2rem" }}>
+            Les familles nous font confiance
+          </h2>
+          <div className="temoignages-grid">
+            <blockquote className="temoignage-card">
+              <p className="temoignage-card__text">
+                "Une équipe très réactive et une nounou formidable avec nos deux enfants. Nous avons enfin trouvé une solution fiable."
+              </p>
+              <footer className="temoignage-card__author">— Sophie, maman de Lina et Hugo</footer>
+            </blockquote>
+            <blockquote className="temoignage-card">
+              <p className="temoignage-card__text">
+                "Les activités proposées sont variées et adaptées. Mon fils attend sa nounou avec impatience chaque semaine."
+              </p>
+              <footer className="temoignage-card__author">— Julien, papa de Nathan</footer>
+            </blockquote>
+            <blockquote className="temoignage-card">
+              <p className="temoignage-card__text">
+                "Le vrai plus : aucune gestion administrative à faire."
+              </p>
+              <footer className="temoignage-card__author">— Camille, maman de Zoé</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
