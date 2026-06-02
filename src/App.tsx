@@ -139,7 +139,7 @@ export default function App() {
     },
     {
       id: 4,
-      title: "Micro-crèche : entretiens annuels",
+      title: "Crèche : entretiens annuels",
       excerpt: "Guide pratique pour mener les entretiens professionnels annuels dans les structures d'accueil de la petite enfance.",
       imageUrl: "/asset/nursery-education.jpg",
     },
