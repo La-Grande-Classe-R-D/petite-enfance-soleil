@@ -34,13 +34,13 @@ const baloo = Baloo_2({
 export const metadata: Metadata = {
   metadataBase: new URL("https://lgc-jeunesse.lagrandeclasse.fr"),
   title: "La grande classe - Petite enfance",
-  description: "Actualités et dossiers de la petite enfance",
+  description: "Ressources pour les professionnels de la petite enfance à Saint-Ouen et en Seine-Saint-Denis (93) : actualités, pédagogie, réglementation, formations et dossiers pratiques.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "La grande classe - Petite enfance",
-    description: "Actualités et dossiers de la petite enfance",
+    description: "Ressources pour les professionnels de la petite enfance à Saint-Ouen et en Seine-Saint-Denis (93) : actualités, pédagogie, réglementation, formations et dossiers pratiques.",
     url: "https://lgc-jeunesse.lagrandeclasse.fr",
     siteName: "La grande classe - Petite enfance",
     images: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "La grande classe - Petite enfance",
-    description: "Actualités et dossiers de la petite enfance",
+    description: "Ressources pour les professionnels de la petite enfance à Saint-Ouen et en Seine-Saint-Denis (93) : actualités, pédagogie, réglementation, formations et dossiers pratiques.",
     images: ["/asset/icone-lgc.png"],
   },
   icons: {
@@ -89,7 +89,7 @@ export default function RootLayout({
                 "@type": "ImageObject",
                 "url": "https://lgc-jeunesse.lagrandeclasse.fr/asset/icone-lgc.png",
               },
-              "description": "Actualités et dossiers de la petite enfance",
+              "description": "LGC Jeunesse accompagne les professionnels de la petite enfance à Saint-Ouen-sur-Seine et en Seine-Saint-Denis (93). Crèches, assistantes maternelles, structures d'accueil : actualités réglementaires, dossiers pédagogiques, formations et ressources pratiques pour mieux accueillir les jeunes enfants.",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "9 Rue de Saint-Denis",
