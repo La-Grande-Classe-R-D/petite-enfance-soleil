@@ -79,41 +79,40 @@ export default function RootLayout({
       <body className="app-body">
         <JsonLd data={{
           "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Organization",
-              "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization",
-              "name": "LGC Jeunesse",
-              "url": "https://lgc-jeunesse.lagrandeclasse.fr",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://lgc-jeunesse.lagrandeclasse.fr/asset/icone-lgc.png",
-              },
-              "description": "LGC Jeunesse accompagne les professionnels de la petite enfance à Saint-Ouen-sur-Seine et en Seine-Saint-Denis (93). Crèches, assistantes maternelles, structures d'accueil : actualités réglementaires, dossiers pédagogiques, formations et ressources pratiques pour mieux accueillir les jeunes enfants.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "9 Rue de Saint-Denis",
-                "addressLocality": "Saint-Ouen-sur-Seine",
-                "postalCode": "93400",
-                "addressCountry": "FR",
-              },
-              "telephone": "+33603177061",
-              "email": "amel.benhamdi@grandeclasse.fr",
-              "sameAs": [
-                "https://www.tiktok.com/@lagrandeclasseofficiel",
-                "https://www.instagram.com/lagrandeclasseidf/",
-                "https://www.linkedin.com/company/23704594/",
-              ],
-            },
-            {
-              "@type": "WebSite",
-              "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#website",
-              "name": "La Grande Classe - Petite enfance",
-              "url": "https://lgc-jeunesse.lagrandeclasse.fr",
-              "publisher": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization" },
-              "inLanguage": "fr-FR",
-            },
+          "@type": "LocalBusiness",
+          "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization",
+          "name": "LGC Jeunesse",
+          "url": "https://lgc-jeunesse.lagrandeclasse.fr",
+          "logo": "https://lgc-jeunesse.lagrandeclasse.fr/asset/icone-lgc.png",
+          "image": "https://lgc-jeunesse.lagrandeclasse.fr/asset/icone-lgc.png",
+          "description": "LGC Jeunesse accompagne les professionnels de la petite enfance à Saint-Ouen-sur-Seine et en Seine-Saint-Denis (93). Crèches, assistantes maternelles, structures d'accueil : actualités réglementaires, dossiers pédagogiques, formations et ressources pratiques pour mieux accueillir les jeunes enfants.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "9 Rue de Saint-Denis",
+            "addressLocality": "Saint-Ouen-sur-Seine",
+            "postalCode": "93400",
+            "addressCountry": "FR",
+          },
+          "telephone": "+33603177061",
+          "email": "amel.benhamdi@grandeclasse.fr",
+          "areaServed": [
+            { "@type": "City", "name": "Saint-Ouen-sur-Seine" },
+            { "@type": "AdministrativeArea", "name": "Seine-Saint-Denis" },
           ],
+          "sameAs": [
+            "https://www.tiktok.com/@lagrandeclasseofficiel",
+            "https://www.instagram.com/lagrandeclasseidf/",
+            "https://www.linkedin.com/company/23704594/",
+          ],
+        }} />
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#website",
+          "name": "La Grande Classe - Petite enfance",
+          "url": "https://lgc-jeunesse.lagrandeclasse.fr",
+          "publisher": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization" },
+          "inLanguage": "fr-FR",
         }} />
         <a href="#main-content" className="skip-link">
           Aller au contenu principal
