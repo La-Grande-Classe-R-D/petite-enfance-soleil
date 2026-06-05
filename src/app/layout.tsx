@@ -7,6 +7,7 @@ import { HeaderWrapper } from "@/components/HeaderWrapper";
 import { Footer } from "@/components/Footer";
 import { ChatbotModal } from "@/components/ChatbotModal";
 import { CookieBanner } from "@/components/CookieBanner";
+import { JsonLd } from "@/components/JsonLd";
 import { Poppins, Open_Sans, Baloo_2 } from "next/font/google";
 
 const poppins = Poppins({
@@ -76,6 +77,44 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${poppins.variable} ${openSans.variable} ${baloo.variable}`}>
       <body className="app-body">
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization",
+              "name": "LGC Jeunesse",
+              "url": "https://lgc-jeunesse.lagrandeclasse.fr",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://lgc-jeunesse.lagrandeclasse.fr/asset/icone-lgc.png",
+              },
+              "description": "Actualités et dossiers de la petite enfance",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "9 Rue de Saint-Denis",
+                "addressLocality": "Saint-Ouen-sur-Seine",
+                "postalCode": "93400",
+                "addressCountry": "FR",
+              },
+              "telephone": "+33603177061",
+              "email": "amel.benhamdi@grandeclasse.fr",
+              "sameAs": [
+                "https://www.tiktok.com/@lagrandeclasseofficiel",
+                "https://www.instagram.com/lagrandeclasseidf/",
+                "https://www.linkedin.com/company/23704594/",
+              ],
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#website",
+              "name": "La Grande Classe - Petite enfance",
+              "url": "https://lgc-jeunesse.lagrandeclasse.fr",
+              "publisher": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization" },
+              "inLanguage": "fr-FR",
+            },
+          ],
+        }} />
         <a href="#main-content" className="skip-link">
           Aller au contenu principal
         </a>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Pratiques professionnelles petite enfance | LGC Jeunesse",
@@ -56,6 +57,17 @@ const markers = [
 export default function PratiquesProfessionnellesPage() {
   return (
     <div className="formation-page">
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://lgc-jeunesse.lagrandeclasse.fr/pratiques-professionnelles",
+        "url": "https://lgc-jeunesse.lagrandeclasse.fr/pratiques-professionnelles",
+        "name": "Pratiques professionnelles petite enfance | LGC Jeunesse",
+        "description": "Repères du quotidien pour les professionnels de la petite enfance : organisation, observation, travail en équipe et relation avec les familles.",
+        "inLanguage": "fr-FR",
+        "isPartOf": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#website" },
+        "publisher": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization" },
+      }} />
       <section className="section section--white formation-hero">
         <div className="container">
           <div className="formation-hero__content">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Réglementation petite enfance | LGC Jeunesse",
@@ -52,6 +53,17 @@ const reminders = [
 export default function ReglementationPage() {
   return (
     <div className="formation-page">
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://lgc-jeunesse.lagrandeclasse.fr/reglementation",
+        "url": "https://lgc-jeunesse.lagrandeclasse.fr/reglementation",
+        "name": "Réglementation petite enfance | LGC Jeunesse",
+        "description": "Cadre réglementaire pour les structures d'accueil de la petite enfance : sécurité, hygiène, documents obligatoires et communication avec les familles.",
+        "inLanguage": "fr-FR",
+        "isPartOf": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#website" },
+        "publisher": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization" },
+      }} />
       <section className="section section--white formation-hero">
         <div className="container">
           <div className="formation-hero__content">

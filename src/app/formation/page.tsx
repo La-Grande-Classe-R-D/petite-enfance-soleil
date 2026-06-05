@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Formation petite enfance | LGC Jeunesse",
@@ -64,6 +65,17 @@ const highlights = [
 export default function FormationPage() {
   return (
     <div className="formation-page">
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://lgc-jeunesse.lagrandeclasse.fr/formation",
+        "url": "https://lgc-jeunesse.lagrandeclasse.fr/formation",
+        "name": "Formation petite enfance | LGC Jeunesse",
+        "description": "Formations professionnelles en anglais (CPF) pour les professionnels de la petite enfance. Certification Bright Language, parcours personnalisé.",
+        "inLanguage": "fr-FR",
+        "isPartOf": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#website" },
+        "publisher": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization" },
+      }} />
       <section className="section section--white formation-hero">
         <div className="container">
           <div className="formation-hero__content">
