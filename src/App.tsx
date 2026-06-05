@@ -108,13 +108,13 @@ export default function App() {
     },
     {
       id: 3,
-      title: "L'éveil des petits passe",
-      imageUrl: "/asset/toddler-learning.jpg",
+      title: "Exploration et découverte",
+      imageUrl: "/asset/montessori_geo.jpg",
     },
     {
       id: 4,
-      title: "L'approche Snoezelen",
-      imageUrl: "/asset/nursery-education.jpg",
+      title: "L'approche Montessori",
+      imageUrl: "/asset/enfant-joue.png",
     },
   ];
 
