@@ -31,8 +31,12 @@ const baloo = Baloo_2({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lgc-jeunesse.lagrandeclasse.fr"),
   title: "La grande classe - Petite enfance",
   description: "Actualités et dossiers de la petite enfance",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "La grande classe - Petite enfance",
     description: "Actualités et dossiers de la petite enfance",

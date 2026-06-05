@@ -4,6 +4,15 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Réglementation petite enfance | LGC Jeunesse",
   description: "Cadre réglementaire pour les structures d'accueil de la petite enfance : sécurité, hygiène, documents obligatoires et communication avec les familles.",
+  alternates: { canonical: "/reglementation" },
+  openGraph: {
+    title: "Réglementation petite enfance | LGC Jeunesse",
+    description: "Cadre réglementaire pour les structures d'accueil de la petite enfance : sécurité, hygiène, documents obligatoires et communication avec les familles.",
+    url: "https://lgc-jeunesse.lagrandeclasse.fr/reglementation",
+    siteName: "La grande classe - Petite enfance",
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 const themes = [

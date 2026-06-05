@@ -4,6 +4,15 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Formation petite enfance | LGC Jeunesse",
   description: "Formations professionnelles en anglais (CPF) pour les professionnels de la petite enfance. Certification Bright Language, parcours personnalisé.",
+  alternates: { canonical: "/formation" },
+  openGraph: {
+    title: "Formation petite enfance | LGC Jeunesse",
+    description: "Formations professionnelles en anglais (CPF) pour les professionnels de la petite enfance. Certification Bright Language, parcours personnalisé.",
+    url: "https://lgc-jeunesse.lagrandeclasse.fr/formation",
+    siteName: "La grande classe - Petite enfance",
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 const modules = [
