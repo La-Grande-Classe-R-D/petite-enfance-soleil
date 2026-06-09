@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
       : null;
 
     await resend.emails.send({
-      from: "La Petite Enfance <onboarding@resend.dev>",
+      from: "La Petite Enfance <contactg@lagrandeclasse.fr>",
       to: "amel.benhamdi@grandeclasse.fr",
       cc: "giusmili67@gmail.com",
       replyTo: email.trim(),
