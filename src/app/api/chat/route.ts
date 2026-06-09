@@ -1,3 +1,4 @@
+import Anthropic from '@anthropic-ai/sdk';
 import { NextRequest, NextResponse } from 'next/server';
 
 const SYSTEM_PROMPT = `Tu es un assistant bienveillant et expert spécialisé en petite enfance pour le site "La Grande Classe - Petite Enfance Soleil".
@@ -18,31 +19,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Messages invalides' }, { status: 400 });
     }
 
-    const response = await fetch('https://api.deepseek.com/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.DEEPSEEK_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: 'deepseek-chat',
-        messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
-          ...messages,
-        ],
-        max_tokens: 1000,
-        temperature: 0.7,
-      }),
+    const client = new Anthropic({ apiKey: process.env.API_KEY_CLAUDE });
+
+    const response = await client.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 1000,
+      system: SYSTEM_PROMPT,
+      messages,
     });
 
-    if (!response.ok) {
-      const error = await response.text();
-      console.error('DeepSeek API error:', error);
-      return NextResponse.json({ error: 'Erreur du service IA' }, { status: 500 });
-    }
-
-    const data = await response.json();
-    const message = data.choices?.[0]?.message?.content;
+    const message = response.content[0]?.type === 'text' ? response.content[0].text : null;
 
     if (!message) {
       return NextResponse.json({ error: 'Réponse vide' }, { status: 500 });
