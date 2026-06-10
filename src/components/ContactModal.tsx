@@ -63,6 +63,25 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     e.preventDefault();
     if (status === "loading") return;
 
+    if (!nom.trim() || !email.trim() || !message.trim()) {
+      setStatus("error");
+      setErrorMsg("Veuillez remplir tous les champs obligatoires.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      setStatus("error");
+      setErrorMsg("Veuillez saisir une adresse email valide.");
+      return;
+    }
+
+    if (message.trim().length < 10) {
+      setStatus("error");
+      setErrorMsg("Le message doit contenir au moins 10 caractères.");
+      return;
+    }
+
     setStatus("loading");
     setErrorMsg("");
 
