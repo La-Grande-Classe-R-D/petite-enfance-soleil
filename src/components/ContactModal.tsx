@@ -144,7 +144,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           </div>
         ) : (
           <div className="contact-modal__body">
-            <form className="contact-modal__form" onSubmit={handleSubmit} noValidate>
+            <form className="contact-modal__form" onSubmit={handleSubmit}>
               {/* honeypot: invisible pour les humains, les bots le remplissent */}
               <div style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }} aria-hidden="true">
                 <label htmlFor="contact-website">Ne pas remplir</label>
