@@ -1,4 +1,3 @@
-import Anthropic from '@anthropic-ai/sdk';
 import { NextRequest, NextResponse } from 'next/server';
 
 // Rate limiting en mémoire : ip → [timestamps]
@@ -63,16 +62,30 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const client = new Anthropic({ apiKey: process.env.API_KEY_CLAUDE });
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+          contents: messages.map((m) => ({
+            role: m.role === 'assistant' ? 'model' : 'user',
+            parts: [{ text: m.content }],
+          })),
+          generationConfig: { maxOutputTokens: 1000 },
+        }),
+      }
+    );
 
-    const response = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 1000,
-      system: SYSTEM_PROMPT,
-      messages,
-    });
+    if (!response.ok) {
+      const error = await response.text();
+      console.error('Gemini API error:', error);
+      return NextResponse.json({ error: 'Erreur du service IA' }, { status: 500 });
+    }
 
-    const message = response.content[0]?.type === 'text' ? response.content[0].text : null;
+    const data = await response.json();
+    const message = data.candidates?.[0]?.content?.parts?.[0]?.text ?? null;
 
     if (!message) {
       return NextResponse.json({ error: 'Réponse vide' }, { status: 500 });
