@@ -36,7 +36,7 @@ export function Header({ isVisible = true, onContactOpen }: HeaderProps) {
         <div className="header-main__inner">
           <Link href="/" className="header-logo" aria-label="Retour à l'accueil">
             <Image
-              src="/asset/logo-transparent.png"
+              src="/asset/logo-blanc-bleu.png"
               alt="Logo La Petite Enfance"
               className="header-logo__icon"
               width={88}

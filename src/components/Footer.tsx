@@ -364,7 +364,7 @@ export function Footer() {
                 <div className="footer-modal__header">
                   <h2 className="footer-modal__title" id={modalContent.titleId}>
                     <Image
-                      src="/asset/logo-transparent.png"
+                      src="/asset/logo-blanc-bleu.png"
                       alt=""
                       className="footer-modal__logo"
                       aria-hidden="true"
