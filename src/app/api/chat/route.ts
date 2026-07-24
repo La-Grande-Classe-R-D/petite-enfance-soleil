@@ -18,31 +18,37 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Messages invalides' }, { status: 400 });
     }
 
-    const response = await fetch('https://api.deepseek.com/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.DEEPSEEK_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: 'deepseek-chat',
-        messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
-          ...messages,
-        ],
-        max_tokens: 1000,
-        temperature: 0.7,
-      }),
-    });
+    const contents = messages.map((msg: { role: 'user' | 'assistant'; content: string }) => ({
+      role: msg.role === 'assistant' ? 'model' : 'user',
+      parts: [{ text: msg.content }],
+    }));
+
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+          contents,
+          generationConfig: {
+            maxOutputTokens: 1000,
+            temperature: 0.7,
+          },
+        }),
+      }
+    );
 
     if (!response.ok) {
       const error = await response.text();
-      console.error('DeepSeek API error:', error);
+      console.error('Gemini API error:', error);
       return NextResponse.json({ error: 'Erreur du service IA' }, { status: 500 });
     }
 
     const data = await response.json();
-    const message = data.choices?.[0]?.message?.content;
+    const message = data.candidates?.[0]?.content?.parts?.[0]?.text;
 
     if (!message) {
       return NextResponse.json({ error: 'Réponse vide' }, { status: 500 });
