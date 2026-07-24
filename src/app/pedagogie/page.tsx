@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Pédagogie petite enfance | LGC Jeunesse",
   description: "Approches et propositions pédagogiques adaptées à la petite enfance : jeu libre, langage, activités sensorielles et autonomie progressive.",
+  alternates: { canonical: "/pedagogie" },
+  openGraph: {
+    title: "Pédagogie petite enfance | LGC Jeunesse",
+    description: "Approches et propositions pédagogiques adaptées à la petite enfance : jeu libre, langage, activités sensorielles et autonomie progressive.",
+    url: "https://lgc-jeunesse.lagrandeclasse.fr/pedagogie",
+    siteName: "La grande classe - Petite enfance",
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 const approaches = [
@@ -45,6 +55,17 @@ const values = [
 export default function PedagogiePage() {
   return (
     <div className="formation-page">
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://lgc-jeunesse.lagrandeclasse.fr/pedagogie",
+        "url": "https://lgc-jeunesse.lagrandeclasse.fr/pedagogie",
+        "name": "Pédagogie petite enfance | LGC Jeunesse",
+        "description": "Approches et propositions pédagogiques adaptées à la petite enfance : jeu libre, langage, activités sensorielles et autonomie progressive.",
+        "inLanguage": "fr-FR",
+        "isPartOf": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#website" },
+        "publisher": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization" },
+      }} />
       <section className="section section--white formation-hero">
         <div className="container">
           <div className="formation-hero__content">

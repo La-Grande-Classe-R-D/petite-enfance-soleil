@@ -108,13 +108,13 @@ export default function App() {
     },
     {
       id: 3,
-      title: "L'éveil des petits passe",
-      imageUrl: "/asset/toddler-learning.jpg",
+      title: "Exploration et découverte",
+      imageUrl: "/asset/montessori_geo.jpg",
     },
     {
       id: 4,
-      title: "L'approche Snoezelen",
-      imageUrl: "/asset/nursery-education.jpg",
+      title: "L'approche Montessori",
+      imageUrl: "/asset/enfant-joue.png",
     },
   ];
 
@@ -141,7 +141,7 @@ export default function App() {
       id: 4,
       title: "Crèche : entretiens annuels",
       excerpt: "Guide pratique pour mener les entretiens professionnels annuels dans les structures d'accueil de la petite enfance.",
-      imageUrl: "/asset/nursery-education.jpg",
+      imageUrl: "https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 5,
@@ -168,6 +168,7 @@ export default function App() {
       imageUrl: "/asset/toddler-learning.jpg",
     },
   ];
+  
 
   const agendaItems = [
     {
@@ -184,7 +185,7 @@ export default function App() {
       id: 3,
       date: "17 Juin",
       title: "Atelier : Éveil musical 0–3 ans",
-    },
+    },  
     {
       id: 4,
       date: "10 Juil",

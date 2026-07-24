@@ -186,7 +186,7 @@ export function Footer() {
 
   const contactItems = [
     { label: "Adresse", value: "9 rue de Saint-Denis, 93400 Saint-Ouen" },
-    { label: "Téléphone", value: "01.40.10.27.22", href: "tel:0140102722" },
+    { label: "Téléphone", value: "+33 06 03 17 70 61", href: "tel:+33603177061" },
     { label: "Email", value: "amel.benhamdi@grandeclasse.fr", href: "mailto:amel.benhamdi@grandeclasse.fr" },
     { label: "Site officiel", value: "lagrandeclasse.fr", href: "https://lagrandeclasse.fr/" },
   ];

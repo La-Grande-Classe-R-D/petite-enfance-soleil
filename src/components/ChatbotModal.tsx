@@ -89,7 +89,7 @@ export function ChatbotModal() {
         body: JSON.stringify({ messages: newMessages }),
       });
       const data = await res.json();
-      const reply = res.ok ? data.message : 'Désolé, une erreur est survenue. Veuillez réessayer.';
+      const reply = res.ok ? data.message : (data.error ?? 'Désolé, une erreur est survenue. Veuillez réessayer.');
       setMessages(prev => [...prev, { role: 'assistant', content: reply }]);
     } catch {
       setMessages(prev => [...prev, { role: 'assistant', content: 'Désolé, une erreur est survenue. Veuillez réessayer.' }]);

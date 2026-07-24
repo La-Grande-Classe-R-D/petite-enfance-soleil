@@ -7,6 +7,7 @@ import { HeaderWrapper } from "@/components/HeaderWrapper";
 import { Footer } from "@/components/Footer";
 import { ChatbotModal } from "@/components/ChatbotModal";
 import { CookieBanner } from "@/components/CookieBanner";
+import { JsonLd } from "@/components/JsonLd";
 import { Poppins, Open_Sans, Baloo_2 } from "next/font/google";
 
 const poppins = Poppins({
@@ -31,11 +32,15 @@ const baloo = Baloo_2({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lgc-jeunesse.lagrandeclasse.fr"),
   title: "La grande classe - Petite enfance",
-  description: "Actualités et dossiers de la petite enfance",
+  description: "Ressources pour les professionnels de la petite enfance à Saint-Ouen et en Seine-Saint-Denis (93) : actualités, pédagogie, réglementation, formations et dossiers pratiques.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "La grande classe - Petite enfance",
-    description: "Actualités et dossiers de la petite enfance",
+    description: "Ressources pour les professionnels de la petite enfance à Saint-Ouen et en Seine-Saint-Denis (93) : actualités, pédagogie, réglementation, formations et dossiers pratiques.",
     url: "https://lgc-jeunesse.lagrandeclasse.fr",
     siteName: "La grande classe - Petite enfance",
     images: [
@@ -50,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "La grande classe - Petite enfance",
-    description: "Actualités et dossiers de la petite enfance",
+    description: "Ressources pour les professionnels de la petite enfance à Saint-Ouen et en Seine-Saint-Denis (93) : actualités, pédagogie, réglementation, formations et dossiers pratiques.",
     images: ["/asset/icone-lgc.png"],
   },
   icons: {
@@ -72,6 +77,43 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${poppins.variable} ${openSans.variable} ${baloo.variable}`}>
       <body className="app-body">
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization",
+          "name": "LGC Jeunesse",
+          "url": "https://lgc-jeunesse.lagrandeclasse.fr",
+          "logo": "https://lgc-jeunesse.lagrandeclasse.fr/asset/icone-lgc.png",
+          "image": "https://lgc-jeunesse.lagrandeclasse.fr/asset/icone-lgc.png",
+          "description": "LGC Jeunesse accompagne les professionnels de la petite enfance à Saint-Ouen-sur-Seine et en Seine-Saint-Denis (93). Crèches, assistantes maternelles, structures d'accueil : actualités réglementaires, dossiers pédagogiques, formations et ressources pratiques pour mieux accueillir les jeunes enfants.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "9 Rue de Saint-Denis",
+            "addressLocality": "Saint-Ouen-sur-Seine",
+            "postalCode": "93400",
+            "addressCountry": "FR",
+          },
+          "telephone": "+33603177061",
+          "email": "amel.benhamdi@grandeclasse.fr",
+          "areaServed": [
+            { "@type": "City", "name": "Saint-Ouen-sur-Seine" },
+            { "@type": "AdministrativeArea", "name": "Seine-Saint-Denis" },
+          ],
+          "sameAs": [
+            "https://www.tiktok.com/@lagrandeclasseofficiel",
+            "https://www.instagram.com/lagrandeclasseidf/",
+            "https://www.linkedin.com/company/23704594/",
+          ],
+        }} />
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#website",
+          "name": "La Grande Classe - Petite enfance",
+          "url": "https://lgc-jeunesse.lagrandeclasse.fr",
+          "publisher": { "@id": "https://lgc-jeunesse.lagrandeclasse.fr/#organization" },
+          "inLanguage": "fr-FR",
+        }} />
         <a href="#main-content" className="skip-link">
           Aller au contenu principal
         </a>
