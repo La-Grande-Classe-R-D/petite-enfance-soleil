@@ -1,5 +1,6 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { HeartHandshake, GraduationCap, ShieldCheck } from "lucide-react";
 import { RecentArticles } from "./components/RecentArticles";
 import { DossiersSection } from "./components/DossiersSection";
@@ -7,6 +8,9 @@ import { InDepthArticles } from "./components/InDepthArticles";
 import { Sidebar } from "./components/Sidebar";
 
 export default function App() {
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const [isHeroVideoPlaying, setIsHeroVideoPlaying] = useState(true);
+
   useEffect(() => {
     const elements = Array.from(
       document.querySelectorAll<HTMLElement>("[data-reveal]")
@@ -33,6 +37,25 @@ export default function App() {
 
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      video.pause();
+    }
+  }, []);
+
+  const toggleHeroVideo = () => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+    if (video.paused) {
+      void video.play();
+    } else {
+      video.pause();
+    }
+  };
 
   // Mock data
   const values = [
@@ -218,9 +241,9 @@ export default function App() {
                 </p>
               </div>
               <div className="hero__actions">
-                <a href="/#menu-nav" className="button button--primary">
+                <Link href="/#menu-nav" className="button button--primary">
                   Découvrir nos services
-                </a>
+                </Link>
                 <a href="mailto:contact@lagrandeclasse.fr" className="button button--secondary">
                   Nous contacter
                 </a>
@@ -230,6 +253,7 @@ export default function App() {
             <div className="hero__media-wrap">
               <div className="hero__media">
                 <video
+                  ref={heroVideoRef}
                   className="hero__image"
                   autoPlay
                   muted
@@ -237,9 +261,21 @@ export default function App() {
                   playsInline
                   preload="none"
                   poster="/asset/daycare-children-playing.jpg"
-                  aria-hidden="true"
+                  onClick={toggleHeroVideo}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      toggleHeroVideo();
+                    }
+                  }}
+                  onPlay={() => setIsHeroVideoPlaying(true)}
+                  onPause={() => setIsHeroVideoPlaying(false)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={isHeroVideoPlaying ? "Mettre la vidéo en pause" : "Lire la vidéo"}
                 >
                   <source src="/asset/lgc-jeunesse-video.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la lecture de vidéos.
                 </video>
               </div>
               <span className="hero__blob hero__blob--orange" aria-hidden="true" />

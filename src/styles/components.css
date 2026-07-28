@@ -211,6 +211,10 @@
   object-fit: cover;
 }
 
+video.hero__image {
+  cursor: pointer;
+}
+
 .hero__blob {
   position: absolute;
   display: block;
@@ -1282,12 +1286,12 @@
     background-attachment: local, local;
   }
 
-  .page::before,
   .header-logo__icon,
   .reveal,
   .footer-modal,
   .footer-modal__overlay,
   .footer-modal__content,
+  .hero__blob,
   .scroll-indicator {
     animation: none !important;
     transition: none !important;
