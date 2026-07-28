@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { VideoHero } from "./components/VideoHero";
+import { HeartHandshake, GraduationCap, ShieldCheck } from "lucide-react";
 import { RecentArticles } from "./components/RecentArticles";
 import { DossiersSection } from "./components/DossiersSection";
 import { InDepthArticles } from "./components/InDepthArticles";
@@ -34,36 +34,31 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    let rafId = 0;
-
-    const handleScroll = () => {
-      if (rafId) {
-        return;
-      }
-
-      rafId = window.requestAnimationFrame(() => {
-        const offset = window.scrollY * 0.25;
-        document.documentElement.style.setProperty(
-          "--page-parallax",
-          `${-offset}px`
-        );
-        rafId = 0;
-      });
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (rafId) {
-        window.cancelAnimationFrame(rafId);
-      }
-    };
-  }, []);
-
   // Mock data
+  const values = [
+    {
+      icon: HeartHandshake,
+      title: "Bienveillance",
+      desc: "Un accompagnement individualisé qui respecte le rythme de chaque enfant.",
+      tint: "var(--tint-green)",
+      iconColor: "var(--green-primary)",
+    },
+    {
+      icon: GraduationCap,
+      title: "Expertise",
+      desc: "Des professionnels formés et diplômés, à jour des dernières évolutions réglementaires.",
+      tint: "var(--tint-blue)",
+      iconColor: "var(--accent-blue)",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Confiance",
+      desc: "Un cadre sécurisant, transparent, pensé en lien étroit avec les familles.",
+      tint: "var(--tint-orange)",
+      iconColor: "var(--accent-orange)",
+    },
+  ];
+
   const recentArticles = [
     {
       id: 1,
@@ -210,7 +205,68 @@ export default function App() {
 
   return (
     <div>
-      <VideoHero />
+      <section className="section section--hero reveal" data-reveal>
+        <div className="container">
+          <div className="layout-split">
+            <div className="stack stack--md">
+              <span className="formation-kicker hero__badge">Petite enfance &amp; accompagnement</span>
+              <h1 className="hero__title">Un accompagnement bienveillant, pensé pour chaque enfant</h1>
+              <div className="hero__content">
+                <p className="hero__text">
+                  Garde d&apos;enfants, formation professionnelle et ressources pédagogiques : LGC Jeunesse
+                  accompagne familles et professionnels de la petite enfance au quotidien.
+                </p>
+              </div>
+              <div className="hero__actions">
+                <a href="/#menu-nav" className="button button--primary">
+                  Découvrir nos services
+                </a>
+                <a href="mailto:contact@lagrandeclasse.fr" className="button button--secondary">
+                  Nous contacter
+                </a>
+              </div>
+            </div>
+
+            <div className="hero__media-wrap">
+              <div className="hero__media">
+                <video
+                  className="hero__image"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  poster="/asset/daycare-children-playing.jpg"
+                  aria-hidden="true"
+                >
+                  <source src="/asset/lgc-jeunesse-video.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <span className="hero__blob hero__blob--orange" aria-hidden="true" />
+              <span className="hero__blob hero__blob--blue" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="Nos valeurs" className="section section--sm reveal" data-reveal>
+        <div className="container">
+          <div className="values-grid">
+            {values.map((value) => {
+              const Icon = value.icon;
+              return (
+                <div key={value.title} className="value-card">
+                  <div className="value-card__icon" style={{ backgroundColor: value.tint, color: value.iconColor }}>
+                    <Icon size={22} aria-hidden="true" />
+                  </div>
+                  <h3 className="value-card__title">{value.title}</h3>
+                  <p className="value-card__desc">{value.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
       <div id="menu-nav">
         <section className="section section--white home-hook reveal" data-reveal>

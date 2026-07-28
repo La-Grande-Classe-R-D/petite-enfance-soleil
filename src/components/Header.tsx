@@ -37,14 +37,52 @@ export function Header({ isVisible = true, onContactOpen }: HeaderProps) {
           <Link href="/" className="header-logo" aria-label="Retour à l'accueil">
             <Image
               src="/asset/logo-blanc-bleu.png"
-              alt="Logo La Petite Enfance"
+              alt="Logo Lgc Jeunesse"
               className="header-logo__icon"
-              width={88}
-              height={88}
+              width={72}
+              height={72}
               priority
-              sizes="5.5rem"
+              sizes="3.4375rem"
             />
+            <span className="header-logo__text">
+              LGC <span className="header-logo__text-muted">Jeunesse</span>
+            </span>
           </Link>
+
+          <nav
+            id="primary-navigation"
+            className={`header-nav${isMenuOpen ? " header-nav--open" : ""}`}
+            aria-label="Navigation principale"
+          >
+            <div className="header-nav__inner">
+              <ul className="header-nav__list">
+                {navLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      className={`header-nav__link${item.matchPath && pathname === item.matchPath ? " header-nav__link--active" : ""}`}
+                      aria-current={item.matchPath && pathname === item.matchPath ? "page" : undefined}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
+
+          <button
+            type="button"
+            className="header-nav__link header-nav__link--contact"
+            onClick={() => {
+              setIsMenuOpen(false);
+              onContactOpen?.();
+            }}
+          >
+            Nous contacter
+          </button>
+
           <button
             type="button"
             className={`header-menu-button${isMenuOpen ? " header-menu-button--open" : ""}`}
@@ -59,41 +97,6 @@ export function Header({ isVisible = true, onContactOpen }: HeaderProps) {
           </button>
         </div>
       </div>
-
-      <nav
-        id="primary-navigation"
-        className={`header-nav${isMenuOpen ? " header-nav--open" : ""}`}
-        aria-label="Navigation principale"
-      >
-        <div className="header-nav__inner">
-          <ul className="header-nav__list">
-            {navLinks.map((item) => (
-              <li key={item.label}>
-                <Link
-                  href={item.href}
-                  className={`header-nav__link${item.matchPath && pathname === item.matchPath ? " header-nav__link--active" : ""}`}
-                  aria-current={item.matchPath && pathname === item.matchPath ? "page" : undefined}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <button
-                type="button"
-                className="header-nav__link header-nav__link--contact"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  onContactOpen?.();
-                }}
-              >
-                Nous contacter
-              </button>
-            </li>
-          </ul>
-        </div>
-      </nav>
     </header>
   );
 }

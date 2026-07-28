@@ -18,7 +18,7 @@
   --accent-foreground: #030213;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
+  --border: rgba(31, 75, 67, 0.12);
   --input: transparent;
   --input-background: #f3f3f5;
   --switch-background: #cbced4;
@@ -30,7 +30,12 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
+  --radius: 0.875rem;
+  --radius-sm: 0.625rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-pill: 999px;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: #030213;
@@ -47,14 +52,19 @@
   --text-4xl: 2.25rem;
   --color-title: rgb(52, 152, 219);
   /* Custom colors for petite enfance theme */
-  --green-primary: #27873e;
-  --green-primary-hover: #246f36;
+  --green-primary: #1F4B43;
+  --green-primary-hover: #163933;
   --yellow-accent: #FFC83D;
-  --gray-light: #F7F7F7;
-  --text-black: #222222;
-  --text-gray: #555555;
+  --gray-light: #F3ECE1;
+  --text-black: #1D2A26;
+  --text-gray: #4B5A56;
   --text-white: #fff;
-  --color-main-title: oklch(51.66% 0.2610 273.96);
+  --color-main-title: #17332D;
+  --accent-orange: #E8734A;
+  --accent-blue: #3B82A6;
+  --tint-green: #E7F1EC;
+  --tint-blue: #EAF1F6;
+  --tint-orange: #FBEBE2;
 }
 
 .dark {
@@ -128,7 +138,7 @@ body {
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
       font-family: var(--font-baloo), var(--font-poppins), system-ui, sans-serif;
-      color: rgb(41, 128, 185);
+      color: var(--green-primary);
     }
 
     h3 {
@@ -136,7 +146,7 @@ body {
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
       font-family: var(--font-baloo), var(--font-poppins), system-ui, sans-serif;
-      color: rgb(41, 128, 185);
+      color: var(--green-primary);
     }
 
     h4 {
