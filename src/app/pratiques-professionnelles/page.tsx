@@ -84,13 +84,6 @@ export default function PratiquesProfessionnellesPage() {
                   </div>
                 ))}
               </div>
-              <a
-                href="/api/pdf/pratiques"
-                download="fiches-metier-pratiques-professionnelles.pdf"
-                className="button button--primary"
-              >
-                Consulter les fiches métiers
-              </a>
             </div>
             <div className="formation-hero__media">
               <Image
