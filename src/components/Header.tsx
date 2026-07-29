@@ -34,7 +34,17 @@ export function Header({ isVisible = true, onContactOpen }: HeaderProps) {
     <header className={`site-header${isVisible ? " site-header--visible" : " site-header--hidden"}`}>
       <div className="header-main">
         <div className="header-main__inner">
-          <Link href="/" className="header-logo" aria-label="Retour à l'accueil">
+          <Link
+            href="/"
+            className="header-logo"
+            aria-label="Retour à l'accueil"
+            onClick={(e) => {
+              if (pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
             <Image
               src="/asset/logo-blanc-bleu.png"
               alt="Logo Lgc Jeunesse"
