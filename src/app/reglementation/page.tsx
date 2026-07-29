@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { DecorativeVideo } from "@/components/DecorativeVideo";
 import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -71,9 +72,7 @@ export default function ReglementationPage() {
               <p className="formation-kicker">Cadre réglementaire</p>
               <h1>Réglementation petite enfance</h1>
               <p className="formation-lead">
-                Une page fictive pour présenter les grands repères réglementaires
-                d'une structure d'accueil: sécurité, hygiène, documents de
-                suivi et communication avec les familles.
+                LA GARDE A DOMICILE proposée par LGC n’est pas régie par les mêmes réglementations
               </p>
               <div className="formation-highlights">
                 {reminders.map((item) => (
@@ -82,24 +81,21 @@ export default function ReglementationPage() {
                   </div>
                 ))}
               </div>
-              <a
+           {/*    <a
                 href="/api/pdf/reglementation"
                 download="fiche-pratique-reglementation-petite-enfance.pdf"
                 className="button button--primary"
               >
                 Télécharger la fiche pratique
-              </a>
+              </a> */}
             </div>
             <div className="formation-hero__media">
-              <Image
-                src="/asset/preschool-classroom.jpg"
-                alt="Espace d'accueil en petite enfance"
+              <DecorativeVideo
+                src="/asset/garde-domicile.mp4"
+                poster="/asset/garde-domicile-poster.jpg"
                 className="formation-hero__image"
-                width={1080}
-                height={720}
-                priority
-                sizes="(max-width: 768px) 100vw, 22rem"
               />
+              <span className="sr-only">Espace d'accueil en petite enfance</span>
             </div>
           </div>
         </div>
