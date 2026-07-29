@@ -157,7 +157,7 @@ Nous nous occupons de toute la partie administrative
               <div className="finance-modal__intro">
                 <div className="finance-modal__eyebrow-row">
                   <Image
-                    src="/asset/ballons.png"
+                    src="/asset/logo-blanc-bleu.png"
                     alt="Illustration ballons"
                     className="finance-modal__intro-image"
                     width={48}
