@@ -1,7 +1,25 @@
 .page {
   min-height: 100vh;
   background-color: #FBF6EF;
+  background-image:
+    linear-gradient(rgba(251, 246, 239, 0.92), rgba(251, 246, 239, 0.92)),
+    url("/asset/daycare-children-playing.jpg");
+  background-size: auto, cover;
+  background-position: center, center;
+  background-attachment: local, fixed;
   position: relative;
+}
+
+.page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/asset/sky-clouds.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.16;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .site-header {
