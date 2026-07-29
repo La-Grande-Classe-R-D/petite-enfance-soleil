@@ -94,7 +94,7 @@ export function HygieneModal({ isOpen, onClose, isClosing }: HygieneModalProps) 
             </span>
             <h2 id="hygiene-modal-title" className="salon-modal__title">
               Nouvelles normes d&apos;hygiène
-              <span className="salon-modal__title-accent"> en crèche</span>
+              <span className="salon-modal__title-accent"> en établissement</span>
             </h2>
             <p className="salon-modal__subtitle">
               Ce qui change concrètement dans votre structure à partir de 2025.

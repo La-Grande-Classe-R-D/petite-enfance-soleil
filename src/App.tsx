@@ -172,7 +172,7 @@ export default function App() {
   const newsItems = [
     {
       id: 1,
-      title: "Normes d'hygiène en crèche : ce qui change",
+      title: "Normes d'hygiène : ce qui change",
       imageUrl: "/asset/preschool-classroom.jpg",
     },
     {
