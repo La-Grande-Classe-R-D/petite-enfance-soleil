@@ -154,7 +154,7 @@ export default function FormationPage() {
         <div className="container">
           <div className="formation-banner">
               <Image
-                src="/asset/ballons.png"
+                src="/asset/logo-blanc-bleu.png"
                 alt=""
                 className="formation-banner__image"
                 width={176}

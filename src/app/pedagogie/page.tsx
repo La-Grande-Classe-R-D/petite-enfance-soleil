@@ -123,7 +123,7 @@ C’est pourquoi chaque intervenant est recruté selon des critères exigeants :
         <div className="container">
           <div className="formation-banner">
               <Image
-                src="/asset/ballons.png"
+                src="/asset/logo-blanc-bleu.png"
                 alt=""
                 className="formation-banner__image"
                 width={176}

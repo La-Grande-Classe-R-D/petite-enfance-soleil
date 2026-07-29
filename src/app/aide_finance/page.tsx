@@ -288,7 +288,7 @@ Nous nous occupons de toute la partie administrative
         <div className="container">
           <div className="formation-banner">
             <Image
-              src="/asset/icone-lgc.png"
+              src="/asset/logo-blanc-bleu.png"
               alt=""
               className="formation-banner__image"
               width={176}

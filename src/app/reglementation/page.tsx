@@ -126,7 +126,7 @@ export default function ReglementationPage() {
         <div className="container">
           <div className="formation-banner">
               <Image
-                src="/asset/pere_castor.png"
+                src="/asset/logo-blanc-bleu.png"
                 alt=""
                 className="formation-banner__image"
                 width={176}

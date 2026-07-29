@@ -1424,6 +1424,7 @@ video.hero__image {
 .formation-banner__image {
   width: 9rem;
   margin: 0 auto;
+  border-radius: .4rem;
 }
 
 .formation-banner__text p {

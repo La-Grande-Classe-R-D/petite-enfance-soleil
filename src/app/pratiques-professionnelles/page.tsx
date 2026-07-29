@@ -128,7 +128,7 @@ export default function PratiquesProfessionnellesPage() {
         <div className="container">
           <div className="formation-banner">
               <Image
-                src="/asset/logo_pe_03.png"
+                src="/asset/logo-blanc-bleu.png"
                 alt=""
                 className="formation-banner__image"
                 width={176}
