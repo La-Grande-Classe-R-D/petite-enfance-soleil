@@ -83,9 +83,27 @@ C’est pourquoi chaque intervenant est recruté selon des critères exigeants :
                   </div>
                 ))}
               </div>
-              <a href="#pistes-pedagogiques" className="button button--primary">
-                Voir les propositions éducatives
-              </a>
+              <div className="hero__actions">
+                <a href="#pistes-pedagogiques" className="button button--primary">
+                  Voir les propositions éducatives
+                </a>
+                <a
+                  href="https://www.1000-premiers-jours.fr/fr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--primary"
+                >
+                  1000 premiers jours
+                </a>
+                <a
+                  href="https://www.mangerbouger.fr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--primary"
+                >
+                  Manger Bouger
+                </a>
+              </div>
             </div>
             <div className="formation-hero__media">
               <Image
