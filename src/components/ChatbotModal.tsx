@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback, type ReactNode } from 'react';
 import { MessageCircle, X, Send, Bot, Sparkles } from 'lucide-react';
 import { useFocusTrap } from '@/lib/useFocusTrap';
 
@@ -9,15 +9,91 @@ interface Message {
   content: string;
 }
 
+function parseInline(text: string, keyPrefix: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((seg, i) =>
+    seg.startsWith('**') && seg.endsWith('**')
+      ? <strong key={`${keyPrefix}-${i}`}>{seg.slice(2, -2)}</strong>
+      : <span key={`${keyPrefix}-${i}`}>{seg}</span>
+  );
+}
+
 function renderContent(text: string) {
-  return text.split('\n').map((line, lineIdx, lines) => {
-    const segments = line.split(/(\*\*[^*]+\*\*)/g).map((seg, i) =>
-      seg.startsWith('**') && seg.endsWith('**')
-        ? <strong key={i}>{seg.slice(2, -2)}</strong>
-        : seg
+  const lines = text.split('\n');
+  const blocks: ReactNode[] = [];
+  let paragraphLines: string[] = [];
+  let listItems: string[] = [];
+  let listType: 'ul' | 'ol' | null = null;
+
+  const flushParagraph = (key: string) => {
+    if (paragraphLines.length === 0) return;
+    blocks.push(
+      <p key={key} className="chatbot-modal__md-p">
+        {paragraphLines.map((line, i) => (
+          <span key={i}>
+            {parseInline(line, `${key}-${i}`)}
+            {i < paragraphLines.length - 1 && <br />}
+          </span>
+        ))}
+      </p>
     );
-    return lineIdx < lines.length - 1 ? [...segments, <br key={`br-${lineIdx}`} />] : segments;
+    paragraphLines = [];
+  };
+
+  const flushList = (key: string) => {
+    if (!listType || listItems.length === 0) return;
+    const items = listItems;
+    blocks.push(
+      listType === 'ul' ? (
+        <ul key={key} className="chatbot-modal__md-list">
+          {items.map((item, i) => <li key={i}>{parseInline(item, `${key}-li-${i}`)}</li>)}
+        </ul>
+      ) : (
+        <ol key={key} className="chatbot-modal__md-list">
+          {items.map((item, i) => <li key={i}>{parseInline(item, `${key}-li-${i}`)}</li>)}
+        </ol>
+      )
+    );
+    listItems = [];
+    listType = null;
+  };
+
+  lines.forEach((rawLine, idx) => {
+    const line = rawLine.trim();
+    const headingMatch = line.match(/^#{1,6}\s+(.*)$/);
+    const ulMatch = line.match(/^[-*]\s+(.*)$/);
+    const olMatch = line.match(/^\d+[.)]\s+(.*)$/);
+
+    if (headingMatch) {
+      flushParagraph(`p-${idx}`);
+      flushList(`l-${idx}`);
+      blocks.push(
+        <p key={`h-${idx}`} className="chatbot-modal__md-heading">
+          {parseInline(headingMatch[1], `h-${idx}`)}
+        </p>
+      );
+    } else if (ulMatch) {
+      flushParagraph(`p-${idx}`);
+      if (listType !== 'ul') flushList(`l-${idx}`);
+      listType = 'ul';
+      listItems.push(ulMatch[1]);
+    } else if (olMatch) {
+      flushParagraph(`p-${idx}`);
+      if (listType !== 'ol') flushList(`l-${idx}`);
+      listType = 'ol';
+      listItems.push(olMatch[1]);
+    } else if (line === '') {
+      flushParagraph(`p-${idx}`);
+      flushList(`l-${idx}`);
+    } else {
+      flushList(`l-${idx}`);
+      paragraphLines.push(line);
+    }
   });
+
+  flushParagraph('p-end');
+  flushList('l-end');
+
+  return blocks;
 }
 
 const WELCOME_SUGGESTIONS = [
