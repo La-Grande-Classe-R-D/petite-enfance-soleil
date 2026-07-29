@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Calendar, Play } from "lucide-react";
 import { SalonModal } from "./SalonModal";
 import { HygieneModal } from "./HygieneModal";
 import { TetineModal } from "./TetineModal";
@@ -34,9 +33,6 @@ interface SidebarProps {
 const SALON_NEWS_ID = 3;
 const HYGIENE_NEWS_ID = 1;
 
-const TETINE_PODCAST_ID = 2;
-const ESPACE_PODCAST_ID = 3;
-
 function useModal() {
   const [open, setOpen] = useState(false);
   const [closing, setClosing] = useState(false);
@@ -57,7 +53,7 @@ function useModal() {
   return { open, closing, openModal, closeModal };
 }
 
-export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
+export function Sidebar({ newsItems }: SidebarProps) {
   const salon = useModal();
   const hygiene = useModal();
   const tetine = useModal();
@@ -66,11 +62,6 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
   const newsHandlers: Partial<Record<number, () => void>> = {
     [SALON_NEWS_ID]: salon.openModal,
     [HYGIENE_NEWS_ID]: hygiene.openModal,
-  };
-
-  const podcastHandlers: Partial<Record<number, () => void>> = {
-    [TETINE_PODCAST_ID]: tetine.openModal,
-    [ESPACE_PODCAST_ID]: espace.openModal,
   };
 
   return (
