@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useFocusTrap } from "@/lib/useFocusTrap";
+import { openContactModal } from "@/lib/contactModalEvent";
 
 const MODAL_EXIT_DURATION_MS = 260;
 
@@ -214,53 +215,17 @@ Nous nous occupons de toute la partie administrative
                   démarches.
                 </p>
               </section>
-              <section className="footer-modal__section finance-modal__section">
-                <h3 className="footer-modal__section-title finance-modal__section-heading">
-                  TARIFS ATELIERS D&apos;ANGLAIS ENFANTS
-                </h3>
-                <div className="finance-modal__pricing-grid">
-                  <div className="finance-modal__pricing-card">
-                    <p className="finance-modal__pricing-title">
-                      Forfaits hebdomadaires
-                    </p>
-                    <ul className="finance-modal__list">
-                      <li>2 heures par semaine : 100 €</li>
-                      <li>4 heures par semaine : 160 €</li>
-                      <li>6 heures par semaine : 240 €</li>
-                      <li>8 heures par semaine : 290 €</li>
-                    </ul>
-                  </div>
-                  <div className="finance-modal__pricing-card">
-                    <p className="finance-modal__pricing-title">
-                      Formules Mercredi
-                    </p>
-                    <ul className="finance-modal__list">
-                      <li>Mercredi matin (9h00 - 12h00) : 140 €</li>
-                      <li>Mercredi après-midi (14h00 - 18h00) : 192 €</li>
-                      <li>Mercredi journée complète (9h00 - 18h00) : 240 €</li>
-                    </ul>
-                  </div>
-                 {/*  <div className="finance-modal__pricing-card finance-modal__pricing-card--wide">
-                    <p className="finance-modal__pricing-title">
-                      Vacances scolaires
-                    </p>
-                    <ul className="finance-modal__list">
-                      <li>Matin 9h00 - 12h00 avec contrat : 24 €</li>
-                      <li>Matin 9h00 - 12h00 sans contrat : 30 €</li>
-                      <li>Après-midi 14h00 - 18h00 avec contrat : 25 €</li>
-                      <li>Après-midi 14h00 - 18h00 sans contrat : 30 €</li>
-                      <li>Journée vacances sans contrat : 50 €</li>
-                    </ul>
-                  </div> */}
-                </div>
-              </section>
               <div className="finance-modal__actions">
-                <a
+                <button
+                  type="button"
                   className="button button--primary finance-modal__contact-button"
-                  href="mailto:amel.benhamdi@grandeclasse.fr?subject=Demande%20d%27information%20-%20Aides%20financieres%20et%20tarifs"
+                  onClick={() => {
+                    closeEstimateModal();
+                    openContactModal();
+                  }}
                 >
                   Nous contacter
-                </a>
+                </button>
               </div>
             </div>
           </div>
