@@ -62,6 +62,11 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    const contents = messages.map((msg: { role: 'user' | 'assistant'; content: string }) => ({
+      role: msg.role === 'assistant' ? 'model' : 'user',
+      parts: [{ text: msg.content }],
+    }));
+
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
@@ -69,11 +74,11 @@ export async function POST(req: NextRequest) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-          contents: messages.map((m) => ({
-            role: m.role === 'assistant' ? 'model' : 'user',
-            parts: [{ text: m.content }],
-          })),
-          generationConfig: { maxOutputTokens: 1000 },
+          contents,
+          generationConfig: {
+            maxOutputTokens: 1000,
+            temperature: 0.7,
+          },
         }),
       }
     );
@@ -85,7 +90,7 @@ export async function POST(req: NextRequest) {
     }
 
     const data = await response.json();
-    const message = data.candidates?.[0]?.content?.parts?.[0]?.text ?? null;
+    const message = data.candidates?.[0]?.content?.parts?.[0]?.text;
 
     if (!message) {
       return NextResponse.json({ error: 'Réponse vide' }, { status: 500 });
