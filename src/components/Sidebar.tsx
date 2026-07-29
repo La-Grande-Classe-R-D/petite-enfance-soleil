@@ -127,7 +127,7 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
         </div>
 
         {/* Agenda */}
-        <div className="sidebar-card">
+        {/* <div className="sidebar-card">
           <h3 className="sidebar-card__title">
             <Calendar className="sidebar-card__icon" aria-hidden="true" />
             Agenda
@@ -144,10 +144,10 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Informations supplémentaires */}
-        <div className="sidebar-card">
+       {/*  <div className="sidebar-card">
           <h3 className="sidebar-card__title">
             Informations supplémentaires
           </h3>
@@ -186,7 +186,7 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </aside>
 
       <SalonModal isOpen={salon.open} onClose={salon.closeModal} isClosing={salon.closing} />
