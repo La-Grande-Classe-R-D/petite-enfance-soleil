@@ -114,6 +114,7 @@
   object-fit: contain;
   align-self: center;
   margin-right: 0.625rem;
+  border-radius: .4rem;
 }
 
 .header-logo__text {
