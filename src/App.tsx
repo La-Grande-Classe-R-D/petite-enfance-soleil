@@ -157,7 +157,7 @@ export default function App() {
     },
     {
       id: 4,
-      title: "Crèche : entretiens annuels",
+      title: "Guide pratique pour les entretiens professionnels annuels",
       excerpt: "Guide pratique pour mener les entretiens professionnels annuels dans les structures d'accueil de la petite enfance.",
       imageUrl: "https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=800&q=80",
     },
@@ -212,10 +212,6 @@ export default function App() {
   ];
 
   const podcasts = [
-    {
-      id: 1,
-      title: "Le bien-être des pros en crèche",
-    },
     {
       id: 2,
       title: "Les enfants et la tétine : jusqu'à quand ?",

@@ -5,7 +5,6 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Calendar, Play } from "lucide-react";
 import { SalonModal } from "./SalonModal";
 import { HygieneModal } from "./HygieneModal";
-import { BienEtreModal } from "./BienEtreModal";
 import { TetineModal } from "./TetineModal";
 import { EspaceModal } from "./EspaceModal";
 
@@ -35,7 +34,6 @@ interface SidebarProps {
 const SALON_NEWS_ID = 3;
 const HYGIENE_NEWS_ID = 1;
 
-const BIENETRE_PODCAST_ID = 1;
 const TETINE_PODCAST_ID = 2;
 const ESPACE_PODCAST_ID = 3;
 
@@ -62,7 +60,6 @@ function useModal() {
 export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
   const salon = useModal();
   const hygiene = useModal();
-  const bienEtre = useModal();
   const tetine = useModal();
   const espace = useModal();
 
@@ -72,7 +69,6 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
   };
 
   const podcastHandlers: Partial<Record<number, () => void>> = {
-    [BIENETRE_PODCAST_ID]: bienEtre.openModal,
     [TETINE_PODCAST_ID]: tetine.openModal,
     [ESPACE_PODCAST_ID]: espace.openModal,
   };
@@ -195,7 +191,6 @@ export function Sidebar({ newsItems, agendaItems, podcasts }: SidebarProps) {
 
       <SalonModal isOpen={salon.open} onClose={salon.closeModal} isClosing={salon.closing} />
       <HygieneModal isOpen={hygiene.open} onClose={hygiene.closeModal} isClosing={hygiene.closing} />
-      <BienEtreModal isOpen={bienEtre.open} onClose={bienEtre.closeModal} isClosing={bienEtre.closing} />
       <TetineModal isOpen={tetine.open} onClose={tetine.closeModal} isClosing={tetine.closing} />
       <EspaceModal isOpen={espace.open} onClose={espace.closeModal} isClosing={espace.closing} />
     </>
