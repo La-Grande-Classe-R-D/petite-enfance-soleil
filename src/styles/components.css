@@ -6,7 +6,7 @@
 
 .site-header {
   border-bottom: 1px solid var(--border);
-  background-color: rgba(251, 246, 239, 0.92);
+  background-color: #fff;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   position: fixed;
