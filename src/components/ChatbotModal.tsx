@@ -221,8 +221,7 @@ export function ChatbotModal() {
                     <Sparkles size={28} />
                   </div>
                   <p className="chatbot-modal__welcome-text">
-                    Bonjour ! Je suis votre assistant spécialisé en petite enfance.
-                    Posez-moi vos questions sur la réglementation, la pédagogie, les formations ou les aides financières.
+                    Bonjour ! C&apos;est un plaisir de vous renseigner
                   </p>
                   <div className="chatbot-modal__suggestions">
                     {WELCOME_SUGGESTIONS.map((s, i) => (
