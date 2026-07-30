@@ -1675,7 +1675,13 @@ video.hero__image {
   }
 
   .finance-modal__header {
+    flex-direction: column;
     align-items: stretch;
+    gap: 1rem;
+  }
+
+  .finance-modal__close {
+    align-self: flex-end;
   }
 
   .finance-modal__title {
