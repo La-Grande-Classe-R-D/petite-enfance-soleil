@@ -14,7 +14,6 @@
 .section {
   padding: 4rem 0; /* ~ py-16 px-4 */
   overflow: hidden;
-  padding-top: calc(4rem + 8rem);
 }
 
 .section--sm {
@@ -27,6 +26,11 @@
   align-items: center;
   padding: 3rem 0;
   padding-top: calc(3rem + 5.5rem);
+}
+
+/* Décalage pour compenser le header fixe : uniquement sur la 1ère section de page */
+.formation-hero {
+  padding-top: calc(4rem + 8rem);
 }
 
 .section--white {
@@ -97,13 +101,17 @@
   }
 
   .section {
-    padding-top: calc(2rem + 7rem);
-    padding-bottom: 2.5rem;
+    padding: 2.5rem 0;
   }
 
   .section--hero {
     min-height: auto;
     padding-top: calc(1.5rem + 7rem);
+    padding-bottom: 2.5rem;
+  }
+
+  .formation-hero {
+    padding-top: calc(2rem + 7rem);
     padding-bottom: 2.5rem;
   }
 
