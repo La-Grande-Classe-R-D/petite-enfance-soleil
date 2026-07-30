@@ -97,13 +97,13 @@
   }
 
   .section {
-    padding-top: calc(2rem + 5.5rem);
+    padding-top: calc(2rem + 7rem);
     padding-bottom: 2.5rem;
   }
 
   .section--hero {
     min-height: auto;
-    padding-top: calc(1.5rem + 5.5rem);
+    padding-top: calc(1.5rem + 7rem);
     padding-bottom: 2.5rem;
   }
 
