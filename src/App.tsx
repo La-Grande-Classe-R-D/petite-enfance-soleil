@@ -270,7 +270,7 @@ export default function App() {
                   tabIndex={0}
                   aria-label={isHeroVideoPlaying ? "Mettre la vidéo en pause" : "Lire la vidéo"}
                 >
-                  <source src="/asset/lgc-jeunesse-video.mp4" type="video/mp4" />
+                  <source src="/asset/garde-domicile-enfant.mp4" type="video/mp4" />
                   Votre navigateur ne supporte pas la lecture de vidéos.
                 </video>
               </div>
