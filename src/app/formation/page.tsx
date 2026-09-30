@@ -120,9 +120,9 @@ export default function FormationPage() {
             </div>
             <div className="formation-hero__media">
               <Image
-                src="/asset/nursery-education.jpg"
-                alt="Nounou avec des enfants"
-                className="formation-hero__image"
+                src="/asset/atelier-en.jpg"
+                alt="L'anglais dès 3 ans"
+                className="formation-hero__image formation-hero__image--shadow"
                 width={1080}
                 height={720}
                 priority
