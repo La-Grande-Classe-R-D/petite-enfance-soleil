@@ -304,19 +304,19 @@ export default function App() {
         <section className="section section--white home-hook reveal" data-reveal>
           <div className="container">
             <h2 className="section-title section-title--lg home-hook__title">
-              LGC Jeunesse, votre partenaire de confiance pour la garde d'enfants à domicile
+              LGC Jeunesse, votre partenaire de confiance pour la garde d&apos;enfants à domicile
             </h2>
             <p className="home-hook__text">
               <strong>LGC jeunesse</strong> est votre entreprise de confiance et de proximité pour
               prendre en charge la garde de votre enfant à votre domicile. Nos
-              professionnels, détenteurs de diplômes reconnus par l'Etat, ont
+              professionnels, détenteurs de diplômes reconnus par l&apos;Etat, ont
               une solide expérience, et prennent soin de vos enfants.
               <br />
               Bien plus qu’une aide, nous sommes là à vos côtés durant tous les moments de votre vie. L’humain, la qualité et la proximité sont au coeur de nos actions.
             </p>
             <p className="home-hook__text">
-              Nos différents modes de garde d'enfants s'adaptent en fonction
-              de votre situation, de vos besoins et de l'âge de votre (vos)
+              Nos différents modes de garde d&apos;enfants s&apos;adaptent en fonction
+              de votre situation, de vos besoins et de l&apos;âge de votre (vos)
               enfant(s).
             </p>
             <h2 className="section-title section-title--lg home-hook__title">
@@ -363,19 +363,19 @@ export default function App() {
           <div className="temoignages-grid">
             <blockquote className="temoignage-card">
               <p className="temoignage-card__text">
-                "Une équipe très réactive et une nounou formidable avec nos deux enfants. Nous avons enfin trouvé une solution fiable."
+                &quot;Une équipe très réactive et une nounou formidable avec nos deux enfants. Nous avons enfin trouvé une solution fiable.&quot;
               </p>
               <footer className="temoignage-card__author">— Sophie, maman de Lina et Hugo</footer>
             </blockquote>
             <blockquote className="temoignage-card">
               <p className="temoignage-card__text">
-                "Les activités proposées sont variées et adaptées. Mon fils attend sa nounou avec impatience chaque semaine."
+                &quot;Les activités proposées sont variées et adaptées. Mon fils attend sa nounou avec impatience chaque semaine.&quot;
               </p>
               <footer className="temoignage-card__author">— Julien, papa de Nathan</footer>
             </blockquote>
             <blockquote className="temoignage-card">
               <p className="temoignage-card__text">
-                "Le vrai plus : aucune gestion administrative à faire."
+                &quot;Le vrai plus : aucune gestion administrative à faire.&quot;
               </p>
               <footer className="temoignage-card__author">— Camille, maman de Zoé</footer>
             </blockquote>

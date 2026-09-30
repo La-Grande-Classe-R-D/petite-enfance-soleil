@@ -22,10 +22,12 @@ export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElemen
       style={style}
     >
       <div className="image-fallback__inner">
+        {/* eslint-disable-next-line @next/next/no-img-element -- data URI de secours, pas d'optimisation utile */}
         <img src={ERROR_IMG_SRC} alt={alt ?? ""} {...rest} data-original-url={src} />
       </div>
     </div>
   ) : (
+    // eslint-disable-next-line @next/next/no-img-element -- URL externe arbitraire, gérée par le fallback onError
     <img
       src={src}
       alt={alt}

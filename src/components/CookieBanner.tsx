@@ -10,6 +10,7 @@ export function CookieBanner() {
 
   useEffect(() => {
     if (!localStorage.getItem(CONSENT_KEY)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage n'est lisible qu'après l'hydratation
       setVisible(true);
     }
   }, []);

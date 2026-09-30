@@ -165,7 +165,7 @@ export default function FormationPage() {
             <div className="formation-banner__text">
               <h2>Objectif pédagogique</h2>
               <p>
-                Former des nounous capables d'assurer un accueil sécurisé, affectif
+                Former des nounous capables d&apos;assurer un accueil sécurisé, affectif
                 et stimulant pour les enfants de 0 à 6 ans, dans un cadre
                 professionnel structuré.
               </p>

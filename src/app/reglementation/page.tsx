@@ -95,7 +95,7 @@ export default function ReglementationPage() {
                 poster="/asset/garde-domicile-poster.jpg"
                 className="formation-hero__image"
               />
-              <span className="sr-only">Espace d'accueil en petite enfance</span>
+              <span className="sr-only">Espace d&apos;accueil en petite enfance</span>
             </div>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function ReglementationPage() {
               <h2>Pourquoi cette rubrique ?</h2>
               <p>
                 Centraliser, visualiser les obligations, les procédures et les
-                points de vigilance d'une structure petite enfance.
+                points de vigilance d&apos;une structure petite enfance.
               </p>
             </div>
           </div>

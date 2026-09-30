@@ -27,6 +27,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   useEffect(() => {
     if (isOpen) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- monte la modale avant son animation d'entrée
       setIsVisible(true);
       formOpenTime.current = Date.now();
       document.body.style.overflow = "hidden";

@@ -80,7 +80,7 @@ export function EspaceModal({ isOpen, onClose, isClosing }: EspaceModalProps) {
             </span>
             <h2 id="espace-modal-title" className="salon-modal__title">
               Aménager l&apos;espace pour
-              <span className="salon-modal__title-accent"> l'autonomie</span>
+              <span className="salon-modal__title-accent"> l&apos;autonomie</span>
             </h2>
             <p className="salon-modal__subtitle">
               Principes pédagogiques et conseils pratiques pour un environnement adapté aux 0–3 ans.

@@ -55,6 +55,7 @@ export default function AideFinancePage() {
       return;
     }
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- monte la modale avant son animation d'entrée
     setIsEstimateModalRendered(true);
     setIsEstimateModalClosing(false);
 
@@ -171,7 +172,7 @@ Nous nous occupons de toute la partie administrative
                   </span>
                 </div>
                 <h2 className="footer-modal__title finance-modal__title-child" id="estimate-modal-title">
-                  TARIFS, GARDE A DOMICILE ET ATELIER D'ANGLAIS POUR ENFANTS
+                  TARIFS, GARDE A DOMICILE ET ATELIER D&apos;ANGLAIS POUR ENFANTS
                 </h2>
               </div>
               <button
@@ -262,10 +263,10 @@ Nous nous occupons de toute la partie administrative
               loading="lazy"
             />
             <div className="formation-banner__text">
-              <h2>CAF, crédit d'impôt, aides employeur : cumulables</h2>
+              <h2>CAF, crédit d&apos;impôt, aides employeur : cumulables</h2>
               <p>
                 La plupart des dispositifs présentés ici sont cumulables.
-                Un foyer éligible peut réduire sa facture de garde jusqu'à 85 % du coût brut.
+                Un foyer éligible peut réduire sa facture de garde jusqu&apos;à 85 % du coût brut.
                 Notre accompagnement administratif vous aide à ne rien laisser sur la table.
               </p>
             </div>

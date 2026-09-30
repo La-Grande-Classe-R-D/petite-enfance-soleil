@@ -345,11 +345,11 @@ export function PratiquesPDF() {
             <Text style={s.ficheNum}>01</Text>
             <View style={s.ficheTitleWrap}>
               <Text style={s.ficheTitle}>Organisation de la journée</Text>
-              <Text style={s.ficheSub}>Cadre de travail — structurer les temps pour sécuriser l'enfant</Text>
+              <Text style={s.ficheSub}>Cadre de travail — structurer les temps pour sécuriser l&apos;enfant</Text>
             </View>
           </View>
 
-          <Text style={s.sectionTitle}>Journée type en structure d'accueil</Text>
+          <Text style={s.sectionTitle}>Journée type en structure d&apos;accueil</Text>
           {timeline.map((t) => (
             <View key={t.time} style={s.timelineItem}>
               <View style={s.timelineBadge}>
@@ -391,7 +391,7 @@ export function PratiquesPDF() {
           <View style={s.ficheHeader}>
             <Text style={s.ficheNum}>02</Text>
             <View style={s.ficheTitleWrap}>
-              <Text style={s.ficheTitle}>Observation de l'enfant</Text>
+              <Text style={s.ficheTitle}>Observation de l&apos;enfant</Text>
               <Text style={s.ficheSub}>Posture professionnelle — observer sans intervenir systématiquement</Text>
             </View>
           </View>
@@ -400,9 +400,9 @@ export function PratiquesPDF() {
             <View style={s.gridColLeft}>
               <View style={s.card}>
                 <Text style={s.cardScope}>Pourquoi observer ?</Text>
-                <Text style={s.cardTitle}>Les objectifs de l'observation</Text>
+                <Text style={s.cardTitle}>Les objectifs de l&apos;observation</Text>
                 <Bullet>Repérer les besoins individuels (sécurité, autonomie, lien)</Bullet>
-                <Bullet>Ajuster les propositions d'activité au niveau réel de l'enfant</Bullet>
+                <Bullet>Ajuster les propositions d&apos;activité au niveau réel de l&apos;enfant</Bullet>
                 <Bullet>Détecter précocement les signes de mal-être ou de retard</Bullet>
                 <Bullet>Nourrir les transmissions aux familles avec des faits précis</Bullet>
               </View>
@@ -411,17 +411,17 @@ export function PratiquesPDF() {
               <View style={s.card}>
                 <Text style={s.cardScope}>Comment observer ?</Text>
                 <Text style={s.cardTitle}>Méthodes pratiques</Text>
-                <Bullet>Observer sans intervenir : laisser l'enfant résoudre avant d'aider</Bullet>
+                <Bullet>Observer sans intervenir : laisser l&apos;enfant résoudre avant d&apos;aider</Bullet>
                 <Bullet>Prendre des notes courtes : heure, situation, comportement observé</Bullet>
                 <Bullet>Différencier fait observable et interprétation</Bullet>
-                <Bullet>Partager l'observation en réunion d'équipe pour croiser les regards</Bullet>
+                <Bullet>Partager l&apos;observation en réunion d&apos;équipe pour croiser les regards</Bullet>
               </View>
             </View>
           </View>
 
           <View style={s.cardAccent}>
-            <Text style={s.cardScopeAccent}>Outil — Grille d'observation simplifiée</Text>
-            <Text style={s.cardTitle}>Ce que l'on note au quotidien</Text>
+            <Text style={s.cardScopeAccent}>Outil — Grille d&apos;observation simplifiée</Text>
+            <Text style={s.cardTitle}>Ce que l&apos;on note au quotidien</Text>
             <View style={s.grid2}>
               <View style={s.gridColLeft}>
                 <BulletBold label="Motricité :" text="déplacements, préhension, coordination" />
@@ -441,14 +441,14 @@ export function PratiquesPDF() {
             <Text style={s.ficheNum}>03</Text>
             <View style={s.ficheTitleWrap}>
               <Text style={s.ficheTitle}>Travail en équipe</Text>
-              <Text style={s.ficheSub}>Coordination — répartition des rôles et temps d'échange</Text>
+              <Text style={s.ficheSub}>Coordination — répartition des rôles et temps d&apos;échange</Text>
             </View>
           </View>
 
           <View style={s.grid2}>
             <View style={s.gridColLeft}>
               <View style={s.card}>
-                <Text style={s.cardScope}>Réunions d'équipe</Text>
+                <Text style={s.cardScope}>Réunions d&apos;équipe</Text>
                 <Text style={s.cardTitle}>Organisation des échanges</Text>
                 <Bullet>Réunion hebdomadaire : organisation de la semaine, cas complexes</Bullet>
                 <Bullet>Réunion mensuelle : bilan, projets, ajustements pédagogiques</Bullet>
@@ -462,8 +462,8 @@ export function PratiquesPDF() {
                 <Text style={s.cardTitle}>Entre collègues au quotidien</Text>
                 <Bullet>Passation orale en début de poste : incidents, enfants à surveiller</Bullet>
                 <Bullet>Cahier de bord commun : un outil partagé, pas personnel</Bullet>
-                <Bullet>Ton factuel : ce qui s'est passé, pas ce qu'on en pense</Bullet>
-                <Bullet>Discrétion : pas d'échanges sur les familles dans les espaces communs</Bullet>
+                <Bullet>Ton factuel : ce qui s&apos;est passé, pas ce qu&apos;on en pense</Bullet>
+                <Bullet>Discrétion : pas d&apos;échanges sur les familles dans les espaces communs</Bullet>
               </View>
             </View>
           </View>
@@ -472,7 +472,7 @@ export function PratiquesPDF() {
             <Text style={s.infoText}>
               <Text style={s.infoLabel}>Posture en équipe : </Text>
               Le désaccord entre collègues se règle hors de la présence des enfants et des familles.
-              La cohérence éducative visible est prioritaire sur l'expression des divergences personnelles.
+              La cohérence éducative visible est prioritaire sur l&apos;expression des divergences personnelles.
             </Text>
           </View>
         </View>
@@ -503,12 +503,12 @@ export function PratiquesPDF() {
           </View>
 
           <View style={s.card}>
-            <Text style={s.cardScope}>Temps d'accueil (matin)</Text>
+            <Text style={s.cardScope}>Temps d&apos;accueil (matin)</Text>
             <Text style={s.cardTitle}>Rituels du matin avec les familles</Text>
-            <Bullet>Accueillir le parent et l'enfant ensemble : ne pas "arracher" l'enfant</Bullet>
+            <Bullet>Accueillir le parent et l&apos;enfant ensemble : ne pas &quot;arracher&quot; l&apos;enfant</Bullet>
             <Bullet>Recueillir les informations de nuit : sommeil, santé, humeur</Bullet>
             <Bullet>Rassurer le parent anxieux avec des faits concrets et positifs</Bullet>
-            <Bullet>Limiter la durée du temps de séparation si l'enfant est serein</Bullet>
+            <Bullet>Limiter la durée du temps de séparation si l&apos;enfant est serein</Bullet>
           </View>
 
           <View style={s.card}>
@@ -516,7 +516,7 @@ export function PratiquesPDF() {
             <Text style={s.cardTitle}>Transmissions du soir</Text>
             <Bullet>Toujours finir sur quelque chose de positif ou de concret</Bullet>
             <Bullet>Signaler tout incident même bénin (chute, morsure, pleurs prolongés)</Bullet>
-            <Bullet>Ne pas livrer d'informations sur les autres enfants de la structure</Bullet>
+            <Bullet>Ne pas livrer d&apos;informations sur les autres enfants de la structure</Bullet>
             <Bullet>Orienter vers le référent ou la direction pour les sujets complexes</Bullet>
           </View>
 
@@ -534,16 +534,16 @@ export function PratiquesPDF() {
             <Text style={s.ficheNum}>05</Text>
             <View style={s.ficheTitleWrap}>
               <Text style={s.ficheTitle}>Posture éthique & bientraitance</Text>
-              <Text style={s.ficheSub}>Éthique — droits de l'enfant, secret professionnel, bientraitance</Text>
+              <Text style={s.ficheSub}>Éthique — droits de l&apos;enfant, secret professionnel, bientraitance</Text>
             </View>
           </View>
 
           <View style={s.card}>
             <Text style={s.cardScope}>Bientraitance</Text>
             <Text style={s.cardTitle}>Gestes et postures au quotidien</Text>
-            <BulletAccent>Toujours prévenir l'enfant avant de le toucher (change, soins)</BulletAccent>
+            <BulletAccent>Toujours prévenir l&apos;enfant avant de le toucher (change, soins)</BulletAccent>
             <BulletAccent>Respecter le rythme individuel : ne pas forcer repas ou sieste</BulletAccent>
-            <BulletAccent>Nommer les émotions de l'enfant pour l'aider à les identifier</BulletAccent>
+            <BulletAccent>Nommer les émotions de l&apos;enfant pour l&apos;aider à les identifier</BulletAccent>
             <BulletAccent>Éviter les comparaisons entre enfants, même bienveillantes</BulletAccent>
             <BulletAccent>Ne jamais laisser un enfant en pleurs sans réponse adulte</BulletAccent>
           </View>
@@ -551,8 +551,8 @@ export function PratiquesPDF() {
           <View style={s.card}>
             <Text style={s.cardScope}>Éthique professionnelle</Text>
             <Text style={s.cardTitle}>Obligations et limites</Text>
-            <Bullet>Secret professionnel : tout ce qui concerne l'enfant et la famille reste confidentiel</Bullet>
-            <Bullet>Ne pas partager d'informations sur les familles sur les réseaux sociaux</Bullet>
+            <Bullet>Secret professionnel : tout ce qui concerne l&apos;enfant et la famille reste confidentiel</Bullet>
+            <Bullet>Ne pas partager d&apos;informations sur les familles sur les réseaux sociaux</Bullet>
             <Bullet>Signalement obligatoire si suspicion de maltraitance (cf. fiche réglementation)</Bullet>
             <Bullet>Neutralité : ne pas prendre parti dans les conflits parentaux (séparation, garde)</Bullet>
             <Bullet>Continuité de service : assurer la présence même en cas de désaccord avec la direction</Bullet>
@@ -563,12 +563,12 @@ export function PratiquesPDF() {
               Pour aller plus loin
             </Text>
             <Text style={s.infoText}>
-              <Text style={s.infoLabel}>Convention internationale des droits de l'enfant (CIDE, 1989) </Text>
-              — article 3 : intérêt supérieur de l'enfant dans toute décision.{"\n"}
+              <Text style={s.infoLabel}>Convention internationale des droits de l&apos;enfant (CIDE, 1989) </Text>
+              — article 3 : intérêt supérieur de l&apos;enfant dans toute décision.{"\n"}
               <Text style={s.infoLabel}>Charte nationale de la bientraitance </Text>
-              — ANESM (Agence nationale de l'évaluation et de la qualité des ESMS).{"\n"}
+              — ANESM (Agence nationale de l&apos;évaluation et de la qualité des ESMS).{"\n"}
               <Text style={s.infoLabel}>Analyse des pratiques professionnelles (APP) </Text>
-              — supervision régulière recommandée pour prévenir l'épuisement professionnel.
+              — supervision régulière recommandée pour prévenir l&apos;épuisement professionnel.
             </Text>
           </View>
         </View>

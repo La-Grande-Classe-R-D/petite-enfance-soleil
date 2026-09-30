@@ -132,7 +132,7 @@ export default function PratiquesProfessionnellesPage() {
             <div className="formation-banner__text">
               <h2>5 fiches métier à portée de main</h2>
               <p>
-                Organisation de la journée, observation de l'enfant, travail en
+                Organisation de la journée, observation de l&apos;enfant, travail en
                 équipe, relation avec les familles, posture éthique — les fiches
                 téléchargeables rassemblent les repères essentiels pour chaque
                 situation du quotidien professionnel.
