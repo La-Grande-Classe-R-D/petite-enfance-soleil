@@ -80,7 +80,7 @@ export function TetineModal({ isOpen, onClose, isClosing }: TetineModalProps) {
             </span>
             <h2 id="tetine-modal-title" className="salon-modal__title">
               La tétine chez l&apos;enfant :
-              <span className="salon-modal__title-accent"> jusqu'à quand ?</span>
+              <span className="salon-modal__title-accent"> jusqu&apos;à quand ?</span>
             </h2>
             <p className="salon-modal__subtitle">
               Recommandations, impact et stratégies d&apos;accompagnement pour les équipes et les familles.

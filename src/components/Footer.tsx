@@ -33,6 +33,7 @@ export function Footer() {
       return;
     }
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- monte la modale avant son animation d'entrée
     setRenderedModal(activeModal);
     setIsModalClosing(false);
     closeButtonRef.current?.focus();

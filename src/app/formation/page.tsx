@@ -120,8 +120,8 @@ export default function FormationPage() {
             </div>
             <div className="formation-hero__media">
               <Image
-                src="/asset/atelier-en.png"
-                alt="L'anglais dès 3 ans"
+                src="/asset/atélier-anglais.jpg"
+                alt="L'anglais adultes en situation professionnelle"
                 className="formation-hero__image formation-hero__image--shadow"
                 width={1080}
                 height={720}
@@ -165,7 +165,7 @@ export default function FormationPage() {
             <div className="formation-banner__text">
               <h2>Objectif pédagogique</h2>
               <p>
-                Former des nounous capables d'assurer un accueil sécurisé, affectif
+                Former des nounous capables d&apos;assurer un accueil sécurisé, affectif
                 et stimulant pour les enfants de 0 à 6 ans, dans un cadre
                 professionnel structuré.
               </p>

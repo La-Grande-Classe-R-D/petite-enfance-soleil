@@ -27,6 +27,7 @@ export function Header({ isVisible = true, onContactOpen }: HeaderProps) {
   ];
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- ferme le menu mobile à chaque navigation
     setIsMenuOpen(false);
   }, [pathname]);
 

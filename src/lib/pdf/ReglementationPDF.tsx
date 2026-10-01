@@ -295,7 +295,7 @@ export function ReglementationPDF() {
             Fiche pratique — Réglementation petite enfance
           </Text>
           <Text style={s.headerSub}>
-            Grands repères réglementaires pour les structures d'accueil du jeune
+            Grands repères réglementaires pour les structures d&apos;accueil du jeune
             enfant (EAJE) : sécurité, hygiène, personnel, documents et
             communication avec les familles.
           </Text>
@@ -322,21 +322,21 @@ export function ReglementationPDF() {
           <View style={s.infoBox}>
             <Text style={s.infoText}>
               <Text style={s.infoLabel}>Décret n°2021-1131 </Text>
-              relatif aux EAJE — définit les conditions d'agrément,
-              d'organisation et de fonctionnement.{"\n"}
+              relatif aux EAJE — définit les conditions d&apos;agrément,
+              d&apos;organisation et de fonctionnement.{"\n"}
               <Text style={s.infoLabel}>
-                Code de l'action sociale et des familles (CASF){" "}
+                Code de l&apos;action sociale et des familles (CASF){" "}
               </Text>
               — articles L.2324-1 et suivants.{"\n"}
               <Text style={s.infoLabel}>
                 Protection Maternelle et Infantile (PMI){" "}
               </Text>
-              — autorité de contrôle et d'agrément des structures.
+              — autorité de contrôle et d&apos;agrément des structures.
             </Text>
           </View>
 
           {/* 2. Taux encadrement */}
-          <Text style={s.sectionTitle}>2. Taux d'encadrement</Text>
+          <Text style={s.sectionTitle}>2. Taux d&apos;encadrement</Text>
           <View style={s.grid2}>
             <View style={s.gridColLeft}>
               <View style={s.ratioBadge}>
@@ -442,14 +442,14 @@ export function ReglementationPDF() {
                 <Bullet>Ordonnance obligatoire pour tout médicament administré</Bullet>
                 <Bullet>PAI pour les allergies et pathologies chroniques</Bullet>
                 <Bullet>Registre de traçabilité : date, heure, dose, signature</Bullet>
-                <Bullet>Stock d'urgence : Adrénaline si PAI allergie sévère</Bullet>
+                <Bullet>Stock d&apos;urgence : Adrénaline si PAI allergie sévère</Bullet>
               </View>
             </View>
           </View>
 
           <View style={s.card}>
             <Text style={s.cardScope}>Sécurité des locaux</Text>
-            <Text style={s.cardTitle}>Prévention et procédures d'urgence</Text>
+            <Text style={s.cardTitle}>Prévention et procédures d&apos;urgence</Text>
             <View style={s.grid2}>
               <View style={s.gridColLeft}>
                 <BulletBold label="Plan d'évacuation :" text="affiché, exercice 2×/an minimum" />
@@ -469,18 +469,18 @@ export function ReglementationPDF() {
             <View style={s.gridColLeft}>
               <View style={s.card}>
                 <Text style={s.cardScope}>Documents de structure</Text>
-                <Bullet>Projet d'établissement (révisé tous les 5 ans)</Bullet>
+                <Bullet>Projet d&apos;établissement (révisé tous les 5 ans)</Bullet>
                 <Bullet>Règlement de fonctionnement remis aux familles</Bullet>
                 <Bullet>Projet éducatif et pédagogique</Bullet>
                 <Bullet>Projet de santé (Référent santé)</Bullet>
-                <Bullet>Plan d'organisation en cas de crise sanitaire</Bullet>
+                <Bullet>Plan d&apos;organisation en cas de crise sanitaire</Bullet>
               </View>
             </View>
             <View style={s.gridColRight}>
               <View style={s.card}>
                 <Text style={s.cardScope}>Suivi individuel enfant</Text>
                 <Bullet>Fiche sanitaire complète (vaccins, allergies, médecin)</Bullet>
-                <Bullet>Autorisation parentale : soins d'urgence, sorties, photos</Bullet>
+                <Bullet>Autorisation parentale : soins d&apos;urgence, sorties, photos</Bullet>
                 <Bullet>PAI si pathologie ou allergie déclarée</Bullet>
                 <Bullet>Registre de présences journalières (Arrivée/Départ)</Bullet>
                 <Bullet>Transmissions écrites quotidiennes aux familles</Bullet>
@@ -492,7 +492,7 @@ export function ReglementationPDF() {
           <View style={s.card}>
             <Text style={s.cardScope}>Recommandations GEMRCN</Text>
             <Text style={s.cardTitle}>
-              Groupe d'Étude des Marchés Restauration Collective
+              Groupe d&apos;Étude des Marchés Restauration Collective
             </Text>
             <View style={s.grid2}>
               <View style={s.gridColLeft}>
@@ -501,7 +501,7 @@ export function ReglementationPDF() {
                 <Bullet>Sel et matières grasses limités pour les moins de 3 ans</Bullet>
               </View>
               <View style={s.gridColRight}>
-                <Bullet>Affichage du menu 15 jours à l'avance</Bullet>
+                <Bullet>Affichage du menu 15 jours à l&apos;avance</Bullet>
                 <Bullet>Traçabilité des fournisseurs et allergènes (14 majeurs)</Bullet>
                 <Bullet>Aliments interdits : miel avant 12 mois, charcuterie avant 3 ans</Bullet>
               </View>
@@ -545,7 +545,7 @@ export function ReglementationPDF() {
                 <Text style={s.cardScope}>Documents à remettre</Text>
                 <Text style={s.cardTitle}>Remis obligatoirement</Text>
                 <Bullet>Règlement de fonctionnement (signature des deux parties)</Bullet>
-                <Bullet>Projet d'établissement (sur demande ou remis)</Bullet>
+                <Bullet>Projet d&apos;établissement (sur demande ou remis)</Bullet>
                 <Bullet>Grille tarifaire et modalités de facturation</Bullet>
                 <Bullet>Coordonnées du référent santé et de la PMI locale</Bullet>
                 <Bullet>Procédure de réclamation et voies de recours (CAF, PMI)</Bullet>
@@ -556,10 +556,10 @@ export function ReglementationPDF() {
           <View style={s.card}>
             <Text style={s.cardScope}>RGPD & données personnelles</Text>
             <Text style={s.cardTitle}>Protection des données des enfants et familles</Text>
-            <Bullet>Consentement écrit obligatoire avant toute prise de photo ou vidéo d'un enfant</Bullet>
+            <Bullet>Consentement écrit obligatoire avant toute prise de photo ou vidéo d&apos;un enfant</Bullet>
             <Bullet>Les fiches sanitaires sont des données sensibles (art. 9 RGPD)</Bullet>
             <Bullet>Durée de conservation : dossiers enfants conservés 5 ans après la sortie</Bullet>
-            <Bullet>Droit d'accès et de rectification des parents sur toutes leurs données</Bullet>
+            <Bullet>Droit d&apos;accès et de rectification des parents sur toutes leurs données</Bullet>
           </View>
 
           <Text style={s.sectionTitle}>8. Points de vigilance clés</Text>
@@ -568,18 +568,18 @@ export function ReglementationPDF() {
               <View style={s.card}>
                 <Text style={s.cardScope}>Accueil inclusif</Text>
                 <Text style={s.cardTitle}>Enfants en situation de handicap</Text>
-                <Bullet>Obligation d'accueil non-discriminatoire (loi 2005-102)</Bullet>
+                <Bullet>Obligation d&apos;accueil non-discriminatoire (loi 2005-102)</Bullet>
                 <Bullet>PAI ou PPS adapté à chaque enfant</Bullet>
                 <Bullet>MDPH : mobilisation des aides si nécessaire</Bullet>
               </View>
             </View>
             <View style={s.gridColRight}>
               <View style={s.card}>
-                <Text style={s.cardScope}>Protection de l'enfance</Text>
+                <Text style={s.cardScope}>Protection de l&apos;enfance</Text>
                 <Text style={s.cardTitle}>Signalement obligatoire</Text>
                 <Bullet>Tout professionnel est tenu de signaler une situation de maltraitance</Bullet>
                 <Bullet>Signalement au Procureur ou à la CRIP</Bullet>
-                <Bullet>Formation de l'équipe : repérer les signes de violence ou de négligence</Bullet>
+                <Bullet>Formation de l&apos;équipe : repérer les signes de violence ou de négligence</Bullet>
               </View>
             </View>
           </View>
@@ -591,7 +591,7 @@ export function ReglementationPDF() {
             <Text style={s.infoText}>
               <Text style={s.infoLabel}>PMI locale </Text>— autorité de contrôle, agrément et inspections.{"\n"}
               <Text style={s.infoLabel}>CAF </Text>— financement (PSU : Prestation de Service Unique) et conventionnement.{"\n"}
-              <Text style={s.infoLabel}>CRIP </Text>— Cellule de Recueil des Informations Préoccupantes (protection de l'enfance).{"\n"}
+              <Text style={s.infoLabel}>CRIP </Text>— Cellule de Recueil des Informations Préoccupantes (protection de l&apos;enfance).{"\n"}
               <Text style={s.infoLabel}>119 </Text>— Allô Enfance en Danger (signalement urgent).
             </Text>
           </View>

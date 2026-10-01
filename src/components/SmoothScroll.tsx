@@ -3,6 +3,12 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 
+declare global {
+  interface Window {
+    lenis?: Lenis;
+  }
+}
+
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Add lenis class to html element
@@ -27,12 +33,12 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     requestAnimationFrame(raf);
 
     // Expose lenis instance globally for other components
-    (window as any).lenis = lenis;
+    window.lenis = lenis;
 
     return () => {
       lenis.destroy();
       document.documentElement.classList.remove("lenis", "lenis-smooth");
-      delete (window as any).lenis;
+      delete window.lenis;
     };
   }, []);
 

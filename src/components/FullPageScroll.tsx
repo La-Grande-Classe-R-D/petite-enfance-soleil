@@ -10,7 +10,7 @@ export function FullPageScroll() {
     let cleanupFn: (() => void) | null = null;
 
     const initFullPageScroll = () => {
-      const lenis = (window as any).lenis;
+      const lenis = window.lenis;
 
       if (!lenis) {
         setTimeout(initFullPageScroll, 50);
