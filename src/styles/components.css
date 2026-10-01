@@ -472,8 +472,18 @@ video.hero__image {
   transition: transform 0.3s ease-in-out;
 }
 
+.tile__image--contain {
+  object-fit: contain;
+  object-position: top;
+  background: linear-gradient(90deg, #9f51f0 0%, #915df0 25%, #6862ef 50%, #606cf2 75%, #6a80f5 100%);
+}
+
 .tile:hover .tile__image {
   transform: scale(1.05);
+}
+
+.tile:hover .tile__image--contain {
+  transform: none;
 }
 
 .tile__title {

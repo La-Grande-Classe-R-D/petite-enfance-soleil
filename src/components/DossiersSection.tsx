@@ -5,6 +5,7 @@ interface Dossier {
   id: number;
   title: string;
   imageUrl: string;
+  contain?: boolean;
 }
 
 interface DossiersSectionProps {
@@ -28,7 +29,7 @@ export function DossiersSection({ dossiers }: DossiersSectionProps) {
                 <ImageWithFallback
                   src={dossier.imageUrl}
                   alt={dossier.title}
-                  className="tile__image"
+                  className={dossier.contain ? "tile__image tile__image--contain" : "tile__image"}
                 />
               </div>
               <h3 className="tile__title">
