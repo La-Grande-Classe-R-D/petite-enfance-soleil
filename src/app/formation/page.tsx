@@ -120,8 +120,8 @@ export default function FormationPage() {
             </div>
             <div className="formation-hero__media">
               <Image
-                src="/asset/atelier-en.png"
-                alt="L'anglais dès 3 ans"
+                src="/asset/atélier-anglais.jpg"
+                alt="L'anglais adultes en situation professionnelle"
                 className="formation-hero__image formation-hero__image--shadow"
                 width={1080}
                 height={720}
