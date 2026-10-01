@@ -121,8 +121,9 @@ export default function App() {
     },
     {
       id: 2,
-      title: "Ateliers d'automne",
-      imageUrl: "/asset/autumn-children.jpg",
+      title: "Atelier d'anglais",
+      imageUrl: "/asset/ateliers-anglais_LGC-DOM.png",
+      contain: true,
     },
     {
       id: 3,
