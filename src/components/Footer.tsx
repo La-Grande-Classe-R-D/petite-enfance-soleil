@@ -138,7 +138,7 @@ export function Footer() {
       items: [
         { label: "Editeur du site", value: "LGC Jeunesse - SARL, 5000,00 EUR." },
         { label: "Siege social", value: "9 Rue de Saint-Denis, 93400 Saint-Ouen-sur-Seine." },
-        { label: "SIRET", value: "508 304 185 00038." },
+        { label: "SIRET", value: "882 144 884 00013." },
         { label: "Directeur de la publication", value: "Niang Ismael." },
         {
           label: "Contact",
@@ -159,7 +159,7 @@ export function Footer() {
       items: [
         { label: "Editeur du site", value: "LGC Jeunesse - SARL, 5000,00 EUR." },
         { label: "Siege social", value: "9 Rue de Saint-Denis, 93400 Saint-Ouen-sur-Seine." },
-        { label: "SIRET", value: "508 304 185 00038." },
+        { label: "SIRET", value: "882 144 884 00013." },
         { label: "Directeur de la publication", value: "Niang Ismael." },
         {
           label: "Contact",
