@@ -149,30 +149,6 @@ export default function FormationPage() {
           </div>
         </div>
       </section>
-
-      <section className="section section--white">
-        <div className="container">
-          <div className="formation-banner">
-              <Image
-                src="/asset/logo-blanc-bleu.png"
-                alt=""
-                className="formation-banner__image"
-                width={176}
-                height={176}
-                sizes="9rem"
-                loading="lazy"
-              />
-            <div className="formation-banner__text">
-              <h2>Objectif pédagogique</h2>
-              <p>
-                Former des nounous capables d&apos;assurer un accueil sécurisé, affectif
-                et stimulant pour les enfants de 0 à 6 ans, dans un cadre
-                professionnel structuré.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
