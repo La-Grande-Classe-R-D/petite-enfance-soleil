@@ -136,7 +136,7 @@ export function Footer() {
     {
       title: "La Grande Classe",
       items: [
-        { label: "Editeur du site", value: "LGC Jeunesse - SARL, 5000,00 EUR." },
+        { label: "Editeur du site", value: "LGC - recherche & développement" },
         { label: "Siege social", value: "9 Rue de Saint-Denis, 93400 Saint-Ouen-sur-Seine." },
         { label: "SIRET", value: "882 144 884 00013." },
         { label: "Directeur de la publication", value: "Niang Ismael." },
@@ -157,7 +157,7 @@ export function Footer() {
     {
       title: "Petite Enfance",
       items: [
-        { label: "Editeur du site", value: "LGC Jeunesse - SARL, 5000,00 EUR." },
+        { label: "Editeur du site", value: "LGC - recherche & développement" },
         { label: "Siege social", value: "9 Rue de Saint-Denis, 93400 Saint-Ouen-sur-Seine." },
         { label: "SIRET", value: "882 144 884 00013." },
         { label: "Directeur de la publication", value: "Niang Ismael." },
