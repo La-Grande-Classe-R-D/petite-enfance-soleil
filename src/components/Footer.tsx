@@ -134,27 +134,6 @@ export function Footer() {
 
   const legalSections = [
     {
-      title: "La Grande Classe",
-      items: [
-        { label: "Editeur du site", value: "LGC - recherche & développement" },
-        { label: "Siege social", value: "9 Rue de Saint-Denis, 93400 Saint-Ouen-sur-Seine." },
-        { label: "SIRET", value: "882 144 884 00013." },
-        { label: "Directeur de la publication", value: "Niang Ismael." },
-        {
-          label: "Contact",
-          value: "01 40 10 27 22.",
-          mailto: "contact@lagrandeclasse.fr",
-        },
-        { label: "Hebergement", value: "La grande classe - SARL." },
-        { label: "Propriete intellectuelle", value: "contenus proteges, reproduction interdite sans autorisation." },
-        {
-          label: "Donnees personnelles",
-          value: "usage limite aux services, droits RGPD (acces, rectification, opposition, suppression).",
-        },
-        { label: "Cookies", value: "utilisation possible pour ameliorer l'experience, desactivation via le navigateur." },
-      ],
-    },
-    {
       title: "Petite Enfance",
       items: [
         { label: "Editeur du site", value: "LGC - recherche & développement" },
